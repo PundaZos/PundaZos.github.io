@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Resonance Tier List</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello, this is my website</h1>
-  <p>Made with GitHub Pages.</p>
+  <header>
+    <h1>Resonance Character Tier List</h1>
+    <p>General character ranking from T0 to T5</p>
+  </header>
+
+  <main id="tier-list"></main>
+
+  <section id="character-detail" class="hidden">
+    <button id="close-detail">×</button>
+
+    <div class="detail-header">
+      <img id="detail-image" src="" alt="" />
+      <div>
+        <h2 id="detail-name"></h2>
+        <p id="detail-tier"></p>
+      </div>
+    </div>
+
+    <div class="detail-stats">
+      <div>
+        <h3>Area 1</h3>
+        <p id="detail-area1"></p>
+      </div>
+      <div>
+        <h3>Area 2</h3>
+        <p id="detail-area2"></p>
+      </div>
+      <div>
+        <h3>Area 3</h3>
+        <p id="detail-area3"></p>
+      </div>
+    </div>
+
+    <div class="detail-text">
+      <h3>Cost of Upgrade</h3>
+      <p id="detail-upgrade-cost"></p>
+
+      <h3>Gacha Cost-effectiveness</h3>
+      <p id="detail-gacha-value"></p>
+
+      <h3>Short Analysis</h3>
+      <p id="detail-analysis"></p>
+    </div>
+  </section>
+
+  <script src="characters.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
