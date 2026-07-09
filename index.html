@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Resonance Tier List</title>
-
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>Gacha Recommendation Tier List</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Resonance Character Tier List</h1>
-    <p>General character ranking from T0 to T5</p>
-  </header>
+<nav class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-brand">Gacha Tier List</span>
+    <div class="topbar-tabs" id="topbarTabs">
+      <button type="button" class="topbar-tab" data-target="home-section">Home</button>
+      <button type="button" class="topbar-tab" data-target="tier-list-section">Tier List</button>
+      <button type="button" class="topbar-tab" data-target="characters-section">Characters</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle day and night mode" type="button">
+      <span id="themeLabel">Night</span>
+      <span class="track"><span class="thumb"></span></span>
+    </button>
+  </div>
+</nav>
+<div class="app">
 
-  <main id="tier-list"></main>
+  <section class="panel tab-panel home-panel" id="home-section">
+    <h2>Welcome</h2>
+    <p class="home-copy">In <strong>Resonance Solstice</strong>, characters lean heavily on one another, so judging any one of them in isolation rarely tells the full story — how good a character is depends a lot on who's standing next to them. That's what makes a single, objective strength ranking so hard to pin down.</p>
+    <p class="home-copy">Instead, this list scores every character across five factors: three performance categories — <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong> — plus two value factors, <strong>Investment Cost</strong> and <strong>Gacha Value</strong>. Those five scores combine into one overall verdict, shown here as the <strong>Gacha Recommendation Tier List</strong>.</p>
+    <p class="home-copy">It's built with new players, free-to-play players, and low spenders in mind.</p>
+  </section>
 
-  <section id="character-detail" class="hidden">
-    <button id="close-detail">×</button>
+  <section class="panel tab-panel" id="tier-list-section">
+    <div class="tier-intro">
+      <h1>Gacha Recommendation Tier List</h1>
+      <p class="lede">Not a "who's strongest" ranking — a "who's worth the gacha" one. Each character is scored across five factors: how they carry you through <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong>, plus how much they cost to build (<strong>Investment Cost</strong>) and whether they're worth chasing on their banner (<strong>Gacha Value</strong>). Those five combine into one S–D verdict below.</p>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div id="tierBoard"></div>
+  </section>
 
-    <div class="detail-header">
-      <img id="detail-image" src="" alt="" />
+  <section class="panel tab-panel" id="characters-section">
+    <div class="panel-head">
       <div>
-        <h2 id="detail-name"></h2>
-        <p id="detail-tier"></p>
+        <h2>Characters</h2>
+        <p class="panel-sub">Starter Game, Calculation, and Boss Maxxing use the S–D scale. Investment Cost and Gacha Value use their own Low/Medium/High scale instead. Click any character to see the reasoning behind their ratings.</p>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search characters&hellip;" aria-label="Search characters">
       </div>
     </div>
-
-    <div class="detail-stats">
-      <div>
-        <h3>Area 1</h3>
-        <p id="detail-area1"></p>
-      </div>
-      <div>
-        <h3>Area 2</h3>
-        <p id="detail-area2"></p>
-      </div>
-      <div>
-        <h3>Area 3</h3>
-        <p id="detail-area3"></p>
-      </div>
-    </div>
-
-    <div class="detail-text">
-      <h3>Cost of Upgrade</h3>
-      <p id="detail-upgrade-cost"></p>
-
-      <h3>Gacha Cost-effectiveness</h3>
-      <p id="detail-gacha-value"></p>
-
-      <h3>Short Analysis</h3>
-      <p id="detail-analysis"></p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th class="grp-perf">Starter Game</th>
+            <th class="grp-perf">Calculation</th>
+            <th class="grp-perf">Boss Maxxing</th>
+            <th class="grp-val">Investment Cost</th>
+            <th class="grp-val">Gacha Value</th>
+            <th>Overall</th>
+          </tr>
+        </thead>
+        <tbody id="rosterBody"></tbody>
+      </table>
     </div>
   </section>
 
-  <script src="characters.js"></script>
-  <script src="script.js"></script>
+</div>
+
+<div class="chip-tooltip" id="chipTooltip" role="tooltip"></div>
+
+<!-- Config & data first (no dependencies) -->
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+
+<!-- Core engine / model classes -->
+<script src="js/ScoringEngine.js"></script>
+<script src="js/CharacterRepository.js"></script>
+
+<!-- View / controller classes (each depends on the above) -->
+<script src="js/LegendView.js"></script>
+<script src="js/CharacterTableView.js"></script>
+<script src="js/TierBoardView.js"></script>
+<script src="js/ChipTooltipController.js"></script>
+<script src="js/ThemeController.js"></script>
+<script src="js/TabController.js"></script>
+
+<!-- App entry point: wires everything together -->
+<script src="js/app.js"></script>
 </body>
 </html>
