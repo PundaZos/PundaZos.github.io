@@ -58,5 +58,25 @@ const CHARACTER_ROSTER = [
     investmentCostNote: 'Pelota needs to be invested as a Sub-DPS to perform well.',
     gachaValueNote: "Very Low, Pure Electric Team Support, if sub in other team its only for fun, A1 provide Final DMG reduction, but not a must-pull.",
     briefReview: "Pelota can give Nicola a huge survival advantage, and right now Nicola is pretty much the only one who can proc her kits properly."
+  },
+  {
+    name: 'Stella',
+    imageKey: 'Stella',
+    starterGame: 'S', calculation: 'S', bossMaxxing: 'S',
+    investmentCost: { tier: 'High', requirement: 'Need Survivability.'},
+    gachaValue: 'Must',
+    investmentCostNote: 'Stella needs survivability investment.',
+    gachaValueNote: "Stella is a must-pull, its a win for losing 50/50 before her A5.",
+    briefReview: "Stella is Stella."
+  },
+  {
+    name: 'Anfiya',
+    imageKey: 'Anfiya',
+    starterGame: 'B', calculation: 'S', bossMaxxing: 'A',
+    investmentCost: { tier: 'Low'},
+    gachaValue: 'High',
+    investmentCostNote: 'Anfiya is a versatile support who can be built with a low investment.',
+    gachaValueNote: "Versatile CC Support, A5 for Basic-Attack Team, consider the price before you gacha.",
+    briefReview: "Anfiya is the end of CC support, can play Perma-Coffin when she is support."
   }
 ];
