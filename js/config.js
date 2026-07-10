@@ -18,7 +18,7 @@ const GRADE_MEANING = {
   S: 'Excellent',
   A: 'Strong',
   B: 'Solid',
-  C: 'Situational',
+  C: 'Below Average',
   D: 'Not Recommended'
 };
 
