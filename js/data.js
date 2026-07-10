@@ -38,5 +38,25 @@ const CHARACTER_ROSTER = [
     investmentCostNote: 'Caroline is a pure support, no need to invest too much.',
     gachaValueNote: "Her A1 (Awaken 1) makes her versatile, can be a great support for many teams.",
     briefReview: "A Cost Regen support for Electric teams, strong Draw support at A1."
+  },
+  {
+    name: 'Tennie',
+    imageKey: 'Tennie',
+    starterGame: 'B', calculation: 'A', bossMaxxing: 'C',
+    investmentCost: { tier: 'Low'},
+    gachaValue: 'Average',
+    investmentCostNote: 'Tennie is a pure support, no need to invest too much.',
+    gachaValueNote: "Average, can be teammate with Conner. Can be substitute by other supports.",
+    briefReview: "Can be Conner's teammate, very good in Nayuta-Aoba shuffle, can in in Electric team, Perma-Freeze has no DMG, not a must-pull."
+  },
+  {
+    name: 'Pelota',
+    imageKey: 'Pelota',
+    starterGame: 'D', calculation: 'S', bossMaxxing: 'S',
+    investmentCost: { tier: 'High', requirement: 'Invest as Sub-DPS'},
+    gachaValue: 'Very Low',
+    investmentCostNote: 'Pelota needs to be invested as a Sub-DPS to perform well.',
+    gachaValueNote: "Very Low, Pure Electric Team Support, if sub in other team its only for fun, A1 provide Final DMG reduction, but not a must-pull.",
+    briefReview: "Pelota can give Nicola a huge survival advantage, and right now Nicola is pretty much the only one who can proc her kits properly."
   }
 ];
