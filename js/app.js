@@ -11,12 +11,13 @@ class GachaTierListApp {
   }
 
   init(){
-    const legendElement = document.getElementById('legend');
     const rosterTableBodyElement = document.getElementById('rosterBody');
     const searchInputElement = document.getElementById('searchInput');
     const tierBoardElement = document.getElementById('tierBoard');
 
-    this.legendView = new LegendView(legendElement);
+    this.charactersLegendView = new LegendView(document.getElementById('charactersLegend'));
+    this.tierFactorDefinitionsView = new FactorDefinitionsView(document.getElementById('tierFactorDefinitions'));
+    this.charactersFactorDefinitionsView = new FactorDefinitionsView(document.getElementById('charactersFactorDefinitions'));
     this.characterTableView = new CharacterTableView(
       rosterTableBodyElement, searchInputElement, this.characterRepository, this.scoringEngine, this.imageResolver
     );
@@ -24,7 +25,9 @@ class GachaTierListApp {
       tierBoardElement, this.characterRepository, this.scoringEngine, this.imageResolver
     );
 
-    this.legendView.render();
+    this.charactersLegendView.render();
+    this.tierFactorDefinitionsView.render();
+    this.charactersFactorDefinitionsView.render();
     this.characterTableView.render();
     this.tierBoardView.render();
 
@@ -39,7 +42,12 @@ class GachaTierListApp {
     this.tabController = new TabController(Array.from(document.querySelectorAll('.topbar-tab')));
     this.tabController.showTab('home-section');
 
-    this.chipTooltipController = new ChipTooltipController(
+    this.charactersDefinitionsToggle = new CollapsibleSectionController(
+      document.getElementById('charactersDefToggle'),
+      document.getElementById('charactersFactorDefinitions')
+    );
+
+    this.cardTooltipController = new CardTooltipController(
       document.getElementById('chipTooltip'),
       tierBoardElement,
       this.characterRepository

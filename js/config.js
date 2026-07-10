@@ -19,7 +19,7 @@ const GRADE_MEANING = {
   A: 'Strong',
   B: 'Solid',
   C: 'Situational',
-  D: 'Skip'
+  D: 'Not Recommended'
 };
 
 // Investment Cost and Gacha Value don't use the S–D scale — they use
@@ -41,12 +41,29 @@ const FACTOR_TYPE_TO_CONVERTER = {
 // `key` matches a property on each character object in CHARACTER_ROSTER.
 // `type` selects which scale (and which converter/renderer) applies:
 //   'grade' -> S/A/B/C/D, 'cost' -> { tier, requirement }, 'value' -> Low/Medium/High
+// `description` is shown in the "What do these mean?" factor breakdown
+// on both the Tier List tab and the Characters tab.
 const FACTOR_DEFINITIONS = [
-  { key: 'starterGame',    label: 'Starter Game',    type: 'grade' },
-  { key: 'calculation',    label: 'Calculation',     type: 'grade' },
-  { key: 'bossMaxxing',    label: 'Boss Maxxing',    type: 'grade' },
-  { key: 'investmentCost', label: 'Investment Cost', type: 'cost' },
-  { key: 'gachaValue',     label: 'Gacha Value',     type: 'value' }
+  {
+    key: 'starterGame', label: 'Starter Game', type: 'grade',
+    description: 'How the character performs with minimal investment — can the team come together easily, and is it comfortable to use through early-to-mid game story content?'
+  },
+  {
+    key: 'calculation', label: 'Calculation', type: 'grade',
+    description: 'Real combat strength in Calculation content, and how well the character teams up in Deep Calculation.'
+  },
+  {
+    key: 'bossMaxxing', label: 'Boss Maxxing', type: 'grade',
+    description: 'A combined look at damage output and cost-efficiency, with scores adjusted somewhat for characters that require heavy manual play.'
+  },
+  {
+    key: 'investmentCost', label: 'Investment Cost', type: 'cost',
+    description: 'Whether the character can run on generic gear and substats, whether it needs its signature weapon to function well, and how necessary — and how impactful — extra Resonance investment is.'
+  },
+  {
+    key: 'gachaValue', label: 'Gacha Value', type: 'value',
+    description: 'Performance at low Awakens, whether higher Awakens unlock a genuinely powerful payoff, and how broadly applicable the character is across content.'
+  }
 ];
 
 // Fixed, equal weighting across all five factors (not adjustable in the UI).

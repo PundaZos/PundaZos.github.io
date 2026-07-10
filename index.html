@@ -27,31 +27,40 @@
     <p class="home-copy">In <strong>Resonance Solstice</strong>, characters lean heavily on one another, so judging any one of them in isolation rarely tells the full story — how good a character is depends a lot on who's standing next to them. That's what makes a single, objective strength ranking so hard to pin down.</p>
     <p class="home-copy">Instead, this list scores every character across five factors: three performance categories — <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong> — plus two value factors, <strong>Investment Cost</strong> and <strong>Gacha Value</strong>. Those five scores combine into one overall verdict, shown here as the <strong>Gacha Recommendation Tier List</strong>.</p>
     <p class="home-copy">It's built with new players, free-to-play players, and low spenders in mind.</p>
+    <p class="home-copy">To be honest, this is still a fairly subjective list. I consulted other top players for input, but there are bound to be gaps — please bear with me, and feel free to point out corrections. That said, since this is meant as a <strong>pull-value</strong> tier list rather than a pure strength tier list, it should be more broadly useful in practice.</p>
+    <p class="home-copy">Also, the two collab characters are left off this list for now, since they aren't currently rerunning.</p>
   </section>
 
   <section class="panel tab-panel" id="tier-list-section">
     <div class="tier-intro">
       <h1>Gacha Recommendation Tier List</h1>
-      <p class="lede">Not a "who's strongest" ranking — a "who's worth the gacha" one. Each character is scored across five factors: how they carry you through <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong>, plus how much they cost to build (<strong>Investment Cost</strong>) and whether they're worth chasing on their banner (<strong>Gacha Value</strong>). Those five combine into one S–D verdict below.</p>
-      <div class="legend" id="legend"></div>
+      <p class="lede">Not a "who's strongest" ranking — a "who's worth the gacha" one. Each character is scored across five factors: how they carry you through Starter Game, Calculation, and Boss Maxxing, plus how much they cost to build (Investment Cost) and whether they're worth chasing on their banner (Gacha Value). Those five combine into one overall verdict below.</p>
+      <details class="factor-definitions-toggle">
+        <summary>What do these mean?</summary>
+        <dl class="factor-definitions" id="tierFactorDefinitions"></dl>
+      </details>
     </div>
     <div id="tierBoard"></div>
   </section>
 
   <section class="panel tab-panel" id="characters-section">
-    <div class="panel-head">
-      <div>
-        <h2>Characters</h2>
-        <p class="panel-sub">Starter Game, Calculation, and Boss Maxxing use the S–D scale. Investment Cost and Gacha Value use their own Low/Medium/High scale instead. Click any character to see the reasoning behind their ratings.</p>
-      </div>
-      <div class="search-wrap">
-        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6"/>
-          <line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <input type="text" id="searchInput" placeholder="Search characters&hellip;" aria-label="Search characters">
-      </div>
+    <h2>Characters</h2>
+    <p class="panel-sub">Starter Game, Calculation, and Boss Maxxing use the S–D scale. Investment Cost and Gacha Value use their own Low/Medium/High scale instead. Click any character to see the reasoning behind their ratings.</p>
+    <div class="legend" id="charactersLegend"></div>
+
+    <button type="button" class="def-toggle" id="charactersDefToggle">
+      <span class="def-toggle-arrow"></span>What do these mean?
+    </button>
+    <dl class="factor-definitions factor-definitions-compact" id="charactersFactorDefinitions" hidden></dl>
+
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search characters&hellip;" aria-label="Search characters">
     </div>
+
     <div class="table-wrap">
       <table>
         <thead>
@@ -86,9 +95,11 @@
 
 <!-- View / controller classes (each depends on the above) -->
 <script src="js/LegendView.js"></script>
+<script src="js/FactorDefinitionsView.js"></script>
 <script src="js/CharacterTableView.js"></script>
 <script src="js/TierBoardView.js"></script>
-<script src="js/ChipTooltipController.js"></script>
+<script src="js/CardTooltipController.js"></script>
+<script src="js/CollapsibleSectionController.js"></script>
 <script src="js/ThemeController.js"></script>
 <script src="js/TabController.js"></script>
 

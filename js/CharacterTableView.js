@@ -47,10 +47,7 @@ class CharacterTableView {
     }
 
     if (factor.type === 'cost'){
-      const noteHtml = rawValue.requirement
-        ? `<div class="level-note">${escapeHtml(rawValue.requirement)}</div>`
-        : '';
-      return `<td><div class="cost-cell"><div class="level-badge">${escapeHtml(rawValue.tier)}</div>${noteHtml}</div></td>`;
+      return `<td><div class="level-badge">${escapeHtml(rawValue.tier)}</div></td>`;
     }
 
     // type === 'value'
@@ -58,12 +55,18 @@ class CharacterTableView {
   }
 
   renderDetailRow(character){
+    const requirement = character.investmentCost.requirement;
+    const requirementTagHtml = requirement
+      ? `<span class="detail-tag">${escapeHtml(requirement)}</span>`
+      : '';
+
     return `
     <tr class="char-detail-row">
       <td colspan="7">
         <div class="char-detail">
           <div class="char-detail-block">
             <h4>Investment Cost</h4>
+            ${requirementTagHtml}
             <p>${escapeHtml(character.investmentCostNote)}</p>
           </div>
           <div class="char-detail-block">

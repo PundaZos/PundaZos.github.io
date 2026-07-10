@@ -1,9 +1,9 @@
 // ============================================================
-// ChipTooltipController — floating tooltip that follows the
+// CardTooltipController — floating tooltip that follows the
 // cursor (or keyboard focus) over a tier-board chip and shows
 // that character's five stats.
 // ============================================================
-class ChipTooltipController {
+class CardTooltipController {
   constructor(tooltipElement, boardElement, characterRepository){
     this.tooltipElement = tooltipElement;
     this.boardElement = boardElement;
@@ -17,8 +17,8 @@ class ChipTooltipController {
     boardElement.addEventListener('focusout', event => this.handleFocusLeave(event));
   }
 
-  findChip(eventTarget){
-    return eventTarget.closest ? eventTarget.closest('.chip') : null;
+  findCard(eventTarget){
+    return eventTarget.closest ? eventTarget.closest('.tier-card') : null;
   }
 
   renderStatRow(character, factor){
@@ -50,15 +50,15 @@ class ChipTooltipController {
       </div>`;
   }
 
-  buildContent(chipElement){
-    const character = this.characterRepository.findByName(chipElement.dataset.character);
+  buildContent(cardElement){
+    const character = this.characterRepository.findByName(cardElement.dataset.character);
     if (!character) return;
     const statRows = FACTOR_DEFINITIONS.map(factor => this.renderStatRow(character, factor)).join('');
     this.tooltipElement.innerHTML = `<div class="tt-name">${escapeHtml(character.name)}</div>${statRows}`;
   }
 
-  show(chipElement){
-    this.buildContent(chipElement);
+  show(cardElement){
+    this.buildContent(cardElement);
     this.tooltipElement.style.display = 'block';
   }
 
@@ -82,9 +82,9 @@ class ChipTooltipController {
   }
 
   handlePointerEnter(event){
-    const chipElement = this.findChip(event.target);
-    if (!chipElement) return;
-    this.show(chipElement);
+    const cardElement = this.findCard(event.target);
+    if (!cardElement) return;
+    this.show(cardElement);
     this.positionAt(event.clientX, event.clientY);
   }
 
@@ -93,20 +93,20 @@ class ChipTooltipController {
   }
 
   handlePointerLeave(event){
-    const chipElement = this.findChip(event.target);
-    if (chipElement && !chipElement.contains(event.relatedTarget)) this.hide();
+    const cardElement = this.findCard(event.target);
+    if (cardElement && !cardElement.contains(event.relatedTarget)) this.hide();
   }
 
   handleFocusEnter(event){
-    const chipElement = this.findChip(event.target);
-    if (!chipElement) return;
-    this.show(chipElement);
-    const chipRect = chipElement.getBoundingClientRect();
-    this.positionAt(chipRect.left, chipRect.bottom);
+    const cardElement = this.findCard(event.target);
+    if (!cardElement) return;
+    this.show(cardElement);
+    const cardRect = cardElement.getBoundingClientRect();
+    this.positionAt(cardRect.left, cardRect.bottom);
   }
 
   handleFocusLeave(event){
-    const chipElement = this.findChip(event.target);
-    if (chipElement) this.hide();
+    const cardElement = this.findCard(event.target);
+    if (cardElement) this.hide();
   }
 }
