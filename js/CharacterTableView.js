@@ -4,11 +4,12 @@
 // reasoning and a Brief Review.
 // ============================================================
 class CharacterTableView {
-  constructor(tableBodyElement, searchInputElement, characterRepository, scoringEngine){
+  constructor(tableBodyElement, searchInputElement, characterRepository, scoringEngine, imageResolver){
     this.tableBodyElement = tableBodyElement;
     this.searchInputElement = searchInputElement;
     this.characterRepository = characterRepository;
     this.scoringEngine = scoringEngine;
+    this.imageResolver = imageResolver;
     this.expandedCharacterNames = new Set();
 
     this.tableBodyElement.addEventListener('click', event => this.handleRowClick(event));
@@ -85,9 +86,15 @@ class CharacterTableView {
       .map(factor => this.renderFactorCell(character, factor))
       .join('');
 
+    const avatarSrc = this.imageResolver.getClosedUpIconSrc(character);
+    const initial = this.imageResolver.getInitial(character);
+
     const mainRow = `
     <tr class="char-row${isExpanded ? ' expanded' : ''}" data-character="${escapeHtml(character.name)}" tabindex="0">
-      <td><div class="char-name"><span class="char-chevron"><svg viewBox="0 0 8 12" width="8" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>${escapeHtml(character.name)}</div></td>
+      <td><div class="char-name">
+        <img class="char-avatar" src="${escapeHtml(avatarSrc)}" alt="" data-initial="${escapeHtml(initial)}">
+        <span class="char-chevron"><svg viewBox="0 0 8 12" width="8" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>${escapeHtml(character.name)}
+      </div></td>
       ${factorCells}
       <td><div class="overall-badge" data-grade="${tier}">${tier}</div></td>
     </tr>`;
@@ -98,6 +105,19 @@ class CharacterTableView {
   renderEmptyState(message){
     this.tableBodyElement.innerHTML =
       `<tr><td colspan="7" style="text-align:center; color:var(--ink-faint); padding:22px;">${message}</td></tr>`;
+  }
+
+  // If a character's image file isn't available yet, swap it for a
+  // small initial-letter badge instead of showing a broken image icon.
+  attachAvatarFallbacks(){
+    this.tableBodyElement.querySelectorAll('img.char-avatar').forEach(imageElement => {
+      imageElement.addEventListener('error', () => {
+        const fallback = document.createElement('span');
+        fallback.className = 'char-avatar char-avatar-fallback';
+        fallback.textContent = imageElement.dataset.initial;
+        imageElement.replaceWith(fallback);
+      }, { once: true });
+    });
   }
 
   render(){
@@ -115,5 +135,6 @@ class CharacterTableView {
     }
 
     this.tableBodyElement.innerHTML = visibleCharacters.map(character => this.renderRow(character)).join('');
+    this.attachAvatarFallbacks();
   }
 }

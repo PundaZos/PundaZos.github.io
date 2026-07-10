@@ -7,6 +7,7 @@ class GachaTierListApp {
   constructor(){
     this.scoringEngine = new ScoringEngine(FACTOR_DEFINITIONS, FACTOR_WEIGHTS, FACTOR_TYPE_TO_CONVERTER);
     this.characterRepository = new CharacterRepository(CHARACTER_ROSTER);
+    this.imageResolver = new CharacterImageResolver(CHARACTER_IMAGE_CONFIG);
   }
 
   init(){
@@ -17,9 +18,11 @@ class GachaTierListApp {
 
     this.legendView = new LegendView(legendElement);
     this.characterTableView = new CharacterTableView(
-      rosterTableBodyElement, searchInputElement, this.characterRepository, this.scoringEngine
+      rosterTableBodyElement, searchInputElement, this.characterRepository, this.scoringEngine, this.imageResolver
     );
-    this.tierBoardView = new TierBoardView(tierBoardElement, this.characterRepository, this.scoringEngine);
+    this.tierBoardView = new TierBoardView(
+      tierBoardElement, this.characterRepository, this.scoringEngine, this.imageResolver
+    );
 
     this.legendView.render();
     this.characterTableView.render();

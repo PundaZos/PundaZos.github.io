@@ -286,6 +286,16 @@ tbody tr:last-child td{ border-bottom:none; }
   white-space: nowrap;
   display:flex; align-items:center; gap: 8px;
 }
+.char-avatar{
+  width: 34px; height: 34px; border-radius: 50%;
+  object-fit: cover; object-position: center 15%;
+  border: 1px solid var(--line); flex-shrink: 0; background: var(--bg);
+}
+.char-avatar-fallback{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono', monospace; font-weight:700; font-size: 13px;
+  color: var(--ink-dim); background: var(--panel-2);
+}
 .char-row{ cursor: pointer; }
 .char-row:hover{ background: var(--row-hover); }
 .char-chevron{
@@ -381,14 +391,24 @@ tbody tr:last-child td{ border-bottom:none; }
   padding: 12px 14px; min-height: 58px;
 }
 .chip{
-  display:flex; align-items:center; gap:7px;
+  display:flex; align-items:center; gap:8px;
   background: var(--panel-2); border: 1px solid var(--line);
-  padding: 6px 10px 6px 8px; border-radius: 8px;
+  padding: 5px 10px 5px 5px; border-radius: 9px;
   font-size: 12.5px; font-weight:600; color: var(--ink);
   cursor: default;
 }
 .chip:hover, .chip:focus-visible{ border-color: var(--ink-faint); background: var(--panel); }
 .chip .chip-dot{ width:7px; height:7px; border-radius:2px; transform:rotate(45deg); flex-shrink:0; }
+.chip-avatar{
+  width: 26px; height: 34px; border-radius: 6px;
+  object-fit: cover; object-position: center 12%;
+  border: 1px solid var(--line); flex-shrink: 0; background: var(--bg);
+}
+.chip-avatar-fallback{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono', monospace; font-weight:700; font-size: 12px;
+  color: var(--ink-dim); background: var(--bg);
+}
 .tier-empty{ color: var(--ink-faint); font-size:12.5px; font-style:italic; }
 
 .chip-tooltip{
