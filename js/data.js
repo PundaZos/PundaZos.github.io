@@ -26,7 +26,7 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: 'Heavy Gear, Affix & Resonance Investment' },
     gachaValue: 'Low',
     investmentCostNote: 'Nicola demands heavy investment across Gears, Affixes, and Resonance Level before she performs at her best.',
-    gachaValueNote: "She needs Awakening 2 (A2) to really come online, and she isn't a versatile pick outside of that specialized role.",
-    briefReview: "Her stats are strong and her kit feels complete once built, but the sheer cost required to get her there is steep."
+    gachaValueNote: "She needs A2 (Awaken 2) to really come online, and she isn't a versatile pick outside of Electric DPS.",
+    briefReview: "Her stats are strong and her kit is solid once built, but the sheer cost required to get her there is steep."
   }
 ];
