@@ -64,7 +64,7 @@ const CHARACTER_ROSTER = [
     imageKey: 'Stella',
     starterGame: 'S', calculation: 'S', bossMaxxing: 'S',
     investmentCost: { tier: 'High', requirement: 'Need Survivability.'},
-    gachaValue: 'Must',
+    gachaValue: 'Very High',
     investmentCostNote: 'Stella needs survivability investment.',
     gachaValueNote: "Stella is a must-pull, its a win for losing 50/50 before her A5.",
     briefReview: "Stella is Stella."

@@ -27,7 +27,7 @@ const GRADE_MEANING = {
 // used internally for sorting into the tier board; never displayed.
 // Low cost is good (cheap to build); high Gacha Value is good (worth pulling).
 const COST_TIER_TO_NUMBER = { Low: 5, Medium: 3, High: 1 };
-const VALUE_TIER_TO_NUMBER = { Must: 10, High: 5, Average: 3, Low: 1, 'Very Low': -3 };
+const VALUE_TIER_TO_NUMBER = { 'Very High': 10, High: 5, Average: 3, Low: 1, 'Very Low': -3 };
 
 // Converts a character's raw stored value for a factor into a number,
 // depending on which scale that factor uses.
