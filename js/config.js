@@ -68,9 +68,9 @@ const FACTOR_DEFINITIONS = [
 
 // Fixed, equal weighting across all five factors (not adjustable in the UI).
 const FACTOR_WEIGHTS = {
-  starterGame: 1,
+  starterGame: 1.5,
   calculation: 1,
-  bossMaxxing: 1,
-  investmentCost: 1,
-  gachaValue: 1
+  bossMaxxing: 1.5,
+  investmentCost: 1.5,
+  gachaValue: 2
 };
