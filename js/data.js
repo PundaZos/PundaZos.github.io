@@ -28,5 +28,15 @@ const CHARACTER_ROSTER = [
     investmentCostNote: 'Nicola demands heavy investment across Gears, Affixes, and Resonance Level before she performs at her best.',
     gachaValueNote: "She needs A2 (Awaken 2) to really come online, and she isn't a versatile pick outside of Electric DPS.",
     briefReview: "Her stats are strong and her kit is solid once built, but the sheer cost required to get her there is steep."
+  },
+  {
+    name: 'Caroline',
+    imageKey: 'Caroline',
+    starterGame: 'D', calculation: 'S', bossMaxxing: 'S',
+    investmentCost: { tier: 'Low'},
+    gachaValue: 'High',
+    investmentCostNote: 'Caroline is a pure support, no need to invest too much.',
+    gachaValueNote: "Her A1 (Awaken 1) makes her versatile, can be a great support for many teams.",
+    briefReview: "A Cost Regen support for Electric teams, strong Draw support at A1."
   }
 ];
