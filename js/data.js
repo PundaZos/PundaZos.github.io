@@ -154,17 +154,17 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'Fully functions at A0, extremely versatile, hard to replace as a Black Star damage dealer.',
     briefReview: "The perfect capstone of the Black Star system — a 'circle within a circle.' Extremely versatile and powerful as a Support/Sub-C, and just as strong running as your Main C. A near all-rounder from tower-climbing to Boss Maxxing."
   },
-  {
-    name: 'Masaki',
-    imageKey: 'Masaki',
-    starterGame: 'B', calculation: 'A', bossMaxxing: 'S',
-    investmentCost: { tier: 'High', requirement: null },
-    awakenValue: 'High',
-    overallGrade: 'A',
-    investmentCostNote: 'Needs dedicated DEF-affix farming.',
-    awakenValueNote: 'Decent versatility, can form a small Familiar sub-team alongside Maid units.',
-    briefReview: 'A genuinely well-designed kit; his Boss Maxxing ceiling is high but swingy, and he gives a solid boost to any unit that leans on leader-skill or card-face effects.'
-  },
+  //{
+    //name: 'Masaki',
+    //imageKey: 'Masaki',
+    //starterGame: 'B', calculation: 'A', bossMaxxing: 'S',
+    //investmentCost: { tier: 'High', requirement: null },
+    //awakenValue: 'High',
+    //overallGrade: 'A',
+    //investmentCostNote: 'Needs dedicated DEF-affix farming.',
+    //awakenValueNote: 'Decent versatility, can form a small Familiar sub-team alongside Maid units.',
+    //briefReview: 'A genuinely well-designed kit; his Boss Maxxing ceiling is high but swingy, and he gives a solid boost to any unit that leans on leader-skill or card-face effects.'
+  //},
   {
     name: 'Dorothy',
     imageKey: 'Dorothy',
@@ -198,17 +198,17 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'Strong draw support who also deals respectable damage herself; this Summer variant basically needs A2 to work.',
     briefReview: "Heals, draws cards, builds combo, and brings freeze CC, plus solid personal damage — you won't regret pulling her, but she's limited."
   },
-  {
-    name: 'Komugi',
-    imageKey: 'Komugi',
-    starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
-    investmentCost: { tier: 'Average', requirement: null },
-    awakenValue: 'Low',
-    overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: "No playstyle found for her yet outside of being Dorothy's dedicated Support.",
-    briefReview: "A fully-built Komugi can push Dorothy's Boss Maxxing past 200e — but basically nobody runs this. Who's even pulling for the furry unit?"
-  },
+  //{
+    //name: 'Komugi',
+    //imageKey: 'Komugi',
+    //starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
+    //investmentCost: { tier: 'Average', requirement: null },
+    //awakenValue: 'Low',
+    //overallGrade: 'D',
+    //investmentCostNote: 'Standard gear is sufficient.',
+    //awakenValueNote: "No playstyle found for her yet outside of being Dorothy's dedicated Support.",
+    //briefReview: "A fully-built Komugi can push Dorothy's Boss Maxxing past 200e — but basically nobody runs this. Who's even pulling for the furry unit?"
+  //},
   {
     name: 'Paladi',
     imageKey: 'Paladi',
@@ -286,28 +286,28 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'Kit is complete at A0, great card quality on her own, and strong versatility.',
     briefReview: "Mainly a DMG Boost enabler with an independent multiplier that's hard to dilute; her DMG reduction is more of a bonus. Must-pull if you're prepping a Familiar team."
   },
-  {
-    name: 'Reeva',
-    imageKey: 'Reeva',
-    starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
-    investmentCost: { tier: 'Average', requirement: null },
-    awakenValue: 'Low',
-    overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: "A Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
-    briefReview: "Leans on kit synergy over raw numbers; skip her unless you're a big fan (not worth pulling for waifu points). Her discard-deck mechanic looks promising though — worth watching for future support."
-  },
-  {
-    name: 'Ikara',
-    imageKey: 'Ikara',
-    starterGame: 'A', calculation: 'B', bossMaxxing: 'A',
-    investmentCost: { tier: 'High', requirement: null },
-    awakenValue: 'Medium',
-    overallGrade: 'B',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: "Several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now; her utility skill is excellent though.",
-    briefReview: 'The first Dragonkin-system character, with some genuinely fresh design ideas — the Empire update will likely build new units around this system, but for now her stats are just middling. Her story art is gorgeous though.'
-  },
+  //{
+    //name: 'Reeva',
+    //imageKey: 'Reeva',
+    //starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
+    //investmentCost: { tier: 'Average', requirement: null },
+    //awakenValue: 'Low',
+    //overallGrade: 'D',
+    //investmentCostNote: 'Standard gear is sufficient.',
+    //awakenValueNote: "A Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
+    //briefReview: "Leans on kit synergy over raw numbers; skip her unless you're a big fan (not worth pulling for waifu points). Her discard-deck mechanic looks promising though — worth watching for future support."
+  //},
+  //{
+    //name: 'Ikara',
+    //imageKey: 'Ikara',
+    //starterGame: 'A', calculation: 'B', bossMaxxing: 'A',
+    //investmentCost: { tier: 'High', requirement: null },
+    //awakenValue: 'Medium',
+    //overallGrade: 'B',
+    //investmentCostNote: 'Requires specific gear/affixes and resonance.',
+    //awakenValueNote: "Several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now; her utility skill is excellent though.",
+    //briefReview: 'The first Dragonkin-system character, with some genuinely fresh design ideas — the Empire update will likely build new units around this system, but for now her stats are just middling. Her story art is gorgeous though.'
+  //},
   {
     name: 'Katas',
     imageKey: 'Katas',
@@ -440,15 +440,15 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'Usable at A0, no current tower-climbing replacement for the Margiela The Stargazer/Sommer-type lineup.',
     briefReview: "A Stat Monster who can tank Deep Crimson-tier pressure; her Boss Maxxing performance is starting to show its age but she's still good to run."
   },
-  {
-    name: 'Chloe',
-    imageKey: 'Chloe',
-    starterGame: 'A', calculation: 'S', bossMaxxing: 'S',
-    investmentCost: { tier: 'Average', requirement: null },
-    awakenValue: 'Very High',
-    overallGrade: 'S',
-    investmentCostNote: 'Big gap between floor and ceiling.',
-    awakenValueNote: 'Usable from A2, but already extremely versatile.',
-    briefReview: 'The new Electric God — a character gorgeous in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric. Reeva, take notes.'
-  }
+  //{
+    //name: 'Chloe',
+    //imageKey: 'Chloe',
+    //starterGame: 'A', calculation: 'S', bossMaxxing: 'S',
+    //investmentCost: { tier: 'Average', requirement: null },
+    //awakenValue: 'Very High',
+    //overallGrade: 'S',
+    //investmentCostNote: 'Big gap between floor and ceiling.',
+    //awakenValueNote: 'Usable from A2, but already extremely versatile.',
+    //briefReview: 'The new Electric God — a character gorgeous in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric. Reeva, take notes.'
+  //}
 ];
