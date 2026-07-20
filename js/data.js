@@ -145,7 +145,7 @@ const CHARACTER_ROSTER = [
   },
   {
     name: 'Margiela The Stargazer',
-    imageKey: 'MargielaTheStargazer',
+    imageKey: 'Margiela The Stargazer',
     starterGame: 'S', calculation: 'S', bossMaxxing: 'S',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
@@ -189,7 +189,7 @@ const CHARACTER_ROSTER = [
   },
   {
     name: 'Shizuru The Summer Chaser',
-    imageKey: 'ShizuruTheSummerChaser',
+    imageKey: 'Shizuru The SummerChaser',
     starterGame: 'B', calculation: 'S', bossMaxxing: 'S',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
@@ -409,7 +409,7 @@ const CHARACTER_ROSTER = [
   },
   {
     name: 'Raziel The Reminisce',
-    imageKey: 'RazielTheReminisce',
+    imageKey: 'Raziel The Reminisce',
     starterGame: 'A', calculation: 'S', bossMaxxing: 'B',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
