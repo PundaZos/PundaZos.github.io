@@ -408,8 +408,8 @@ const CHARACTER_ROSTER = [
     briefReview: 'A dedicated top-tier healer; like Anfiya, she monopolizes her lane — an F2P-friendly, DMG-reduction powerhouse. Her weakness is that she offers almost no offensive-side buffs, so her play rate may keep declining going forward.'
   },
   {
-    name: 'Raziel The Reminisc',
-    imageKey: 'RazielTheReminisc',
+    name: 'Raziel The Reminisce',
+    imageKey: 'RazielTheReminisce',
     starterGame: 'A', calculation: 'S', bossMaxxing: 'B',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
