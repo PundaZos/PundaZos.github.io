@@ -2,26 +2,22 @@
 // TierBoardView — renders the S-D tier board of character chips.
 // ============================================================
 class TierBoardView {
-  constructor(boardElement, characterRepository, scoringEngine, imageResolver){
+  constructor(boardElement, characterRepository, imageResolver){
     this.boardElement = boardElement;
     this.characterRepository = characterRepository;
-    this.scoringEngine = scoringEngine;
     this.imageResolver = imageResolver;
   }
 
   groupCharactersByTier(){
     const buckets = { S: [], A: [], B: [], C: [], D: [] };
     for (const character of this.characterRepository.getAll()){
-      const score = this.scoringEngine.getScore(character);
-      const tier = this.scoringEngine.getTierForScore(score);
-      buckets[tier].push({ character, score });
+      buckets[character.overallGrade].push(character);
     }
-    GRADE_LETTERS.forEach(grade => buckets[grade].sort((a, b) => b.score - a.score));
+    GRADE_LETTERS.forEach(grade => buckets[grade].sort((a, b) => a.name.localeCompare(b.name)));
     return buckets;
   }
 
-  renderChip(entry, grade){
-    const character = entry.character;
+  renderChip(character, grade){
     const artSrc = this.imageResolver.getHalfBodyArtSrc(character);
     const initial = this.imageResolver.getInitial(character);
     return `
@@ -36,7 +32,7 @@ class TierBoardView {
   renderTierRow(grade, entries){
     const chipsHtml = entries.length === 0
       ? `<span class="tier-empty">— none —</span>`
-      : entries.map(entry => this.renderChip(entry, grade)).join('');
+      : entries.map(character => this.renderChip(character, grade)).join('');
 
     return `
     <div class="tier-row" data-tier="${grade}">

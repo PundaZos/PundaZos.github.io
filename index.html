@@ -25,16 +25,27 @@
   <section class="panel tab-panel home-panel" id="home-section">
     <h2>Welcome</h2>
     <p class="home-copy">In <strong>Resonance Solstice</strong>, characters lean heavily on one another, so judging any one of them in isolation rarely tells the full story — how good a character is depends a lot on who's standing next to them. That's what makes a single, objective strength ranking so hard to pin down.</p>
-    <p class="home-copy">Instead, this list scores every character across five factors: three performance categories — <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong> — plus two value factors, <strong>Investment Cost</strong> and <strong>Gacha Value</strong>. Those five scores combine into one overall verdict, shown here as the <strong>Gacha Recommendation Tier List</strong>.</p>
+    <p class="home-copy">Instead, this list breaks every character down across five factors: three performance categories — <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong> — plus <strong>Investment Cost</strong> and <strong>Awaken Value</strong>. That breakdown informs one final verdict, set directly for each character rather than calculated: their <strong>Gacha Value</strong>, shown here as the <strong>Gacha Recommendation Tier List</strong>.</p>
     <p class="home-copy">It's built with new players, free-to-play players, and low spenders in mind.</p>
-    <p class="home-copy">To be honest, this is still a fairly subjective list. I consulted other top players for input, but there are bound to be gaps — please bear with me, and feel free to point out corrections. That said, since this is meant as a <strong>gacha-value</strong> tier list rather than a pure strength tier list, it should be more broadly useful in practice.</p>
-    <p class="home-copy">Also, the two collab characters are left off this list for now, since they aren't currently rerunning.</p>
+
+    <h3 class="home-subheading">Recommended Rules</h3>
+    <ol class="home-rules">
+      <li>Prioritize new characters over rerun characters.</li>
+      <li>Prioritize support characters over DPS carries.</li>
+      <li>If a character looks like it will get stronger later on, it's fine to wait and pull them then.</li>
+      <li>These are guidelines, not requirements — pull a character you genuinely like regardless.</li>
+    </ol>
+
+    <p class="home-copy">If you're F2P or a light spender, weigh <strong>Gacha Value</strong> more heavily. If you spend more and can afford to invest deeper, weigh <strong>Awaken Value</strong> more heavily instead.</p>
+
+    <p class="home-copy">To be honest, this is still a fairly subjective list. I consulted other top players for input, but there are bound to be gaps — please bear with me, and feel free to point out corrections. That said, since this is meant as a <strong>pull-value</strong> tier list rather than a pure strength tier list, it should be more broadly useful in practice.</p>
+    <p class="home-copy">Collab characters are not included in this tier list.</p>
   </section>
 
   <section class="panel tab-panel" id="tier-list-section">
     <div class="tier-intro">
       <h1>Gacha Recommendation Tier List</h1>
-      <p class="lede">Not a "who's strongest" ranking — a "who's worth the gacha" one. Each character is scored across five factors: how they carry you through Starter Game, Calculation, and Boss Maxxing, plus how much they cost to build (Investment Cost) and whether they're worth chasing on their banner (Gacha Value). Those five combine into one overall verdict below.</p>
+      <p class="lede">Not a "who's strongest" ranking — a "who's worth the gacha" one. Each character is broken down across four factors: how they carry you through Starter Game, Calculation, and Boss Maxxing, plus how much they cost to build (Investment Cost) and how they hold up at low Awakens (Awaken Value). The final Gacha Value verdict below is set directly for each character, informed by that breakdown rather than auto-calculated from it.</p>
       <details class="factor-definitions-toggle">
         <summary>What do these mean?</summary>
         <dl class="factor-definitions" id="tierFactorDefinitions"></dl>
@@ -45,7 +56,7 @@
 
   <section class="panel tab-panel" id="characters-section">
     <h2>Characters</h2>
-    <p class="panel-sub">Starter Game, Calculation, and Boss Maxxing use the S–D scale. Investment Cost and Gacha Value use their own Low/Medium/High scale instead. Click any character to see the reasoning behind their ratings.</p>
+    <p class="panel-sub">Starter Game, Calculation, and Boss Maxxing use the S–D scale. Investment Cost uses its own Low/Medium/High scale, and Awaken Value uses a five-step scale from Must to Very Low. The final Gacha Value grade is set directly, not calculated from the others. Click any character to see the reasoning behind their ratings.</p>
     <div class="legend" id="charactersLegend"></div>
 
     <button type="button" class="def-toggle" id="charactersDefToggle">
@@ -61,6 +72,7 @@
       <input type="text" id="searchInput" placeholder="Search characters&hellip;" aria-label="Search characters">
     </div>
 
+    <p class="table-scroll-hint">Swipe sideways to see all columns &rarr;</p>
     <div class="table-wrap">
       <table>
         <thead>
@@ -70,8 +82,8 @@
             <th class="grp-perf">Calculation</th>
             <th class="grp-perf">Boss Maxxing</th>
             <th class="grp-val">Investment Cost</th>
-            <th class="grp-val">Gacha Value</th>
-            <th>Overall</th>
+            <th class="grp-val">Awaken Value</th>
+            <th>Gacha Value</th>
           </tr>
         </thead>
         <tbody id="rosterBody"></tbody>
@@ -89,7 +101,6 @@
 <script src="js/utils.js"></script>
 
 <!-- Core engine / model classes -->
-<script src="js/ScoringEngine.js"></script>
 <script src="js/CharacterRepository.js"></script>
 <script src="js/CharacterImageResolver.js"></script>
 

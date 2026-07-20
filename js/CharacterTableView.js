@@ -1,14 +1,13 @@
 // ============================================================
 // CharacterTableView — renders the searchable Characters table.
-// Clicking a row expands it to show Investment Cost / Gacha Value
+// Clicking a row expands it to show Investment Cost / Awaken Value
 // reasoning and a Brief Review.
 // ============================================================
 class CharacterTableView {
-  constructor(tableBodyElement, searchInputElement, characterRepository, scoringEngine, imageResolver){
+  constructor(tableBodyElement, searchInputElement, characterRepository, imageResolver){
     this.tableBodyElement = tableBodyElement;
     this.searchInputElement = searchInputElement;
     this.characterRepository = characterRepository;
-    this.scoringEngine = scoringEngine;
     this.imageResolver = imageResolver;
     this.expandedCharacterNames = new Set();
 
@@ -70,8 +69,8 @@ class CharacterTableView {
             <p>${escapeHtml(character.investmentCostNote)}</p>
           </div>
           <div class="char-detail-block">
-            <h4>Gacha Value</h4>
-            <p>${escapeHtml(character.gachaValueNote)}</p>
+            <h4>Awaken Value</h4>
+            <p>${escapeHtml(character.awakenValueNote)}</p>
           </div>
           <div class="char-detail-block">
             <h4>Brief Review</h4>
@@ -83,7 +82,7 @@ class CharacterTableView {
   }
 
   renderRow(character){
-    const tier = this.scoringEngine.getTierForCharacter(character);
+    const tier = character.overallGrade;
     const isExpanded = this.expandedCharacterNames.has(character.name);
     const factorCells = FACTOR_DEFINITIONS
       .map(factor => this.renderFactorCell(character, factor))

@@ -54,7 +54,12 @@ class CardTooltipController {
     const character = this.characterRepository.findByName(cardElement.dataset.character);
     if (!character) return;
     const statRows = FACTOR_DEFINITIONS.map(factor => this.renderStatRow(character, factor)).join('');
-    this.tooltipElement.innerHTML = `<div class="tt-name">${escapeHtml(character.name)}</div>${statRows}`;
+    const gachaValueRow = `
+      <div class="tt-row tt-row-overall">
+        <span>Gacha Value</span>
+        <span class="tt-badge" data-grade="${character.overallGrade}">${character.overallGrade}</span>
+      </div>`;
+    this.tooltipElement.innerHTML = `<div class="tt-name">${escapeHtml(character.name)}</div>${gachaValueRow}${statRows}`;
   }
 
   show(cardElement){
