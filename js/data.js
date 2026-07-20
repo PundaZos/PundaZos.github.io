@@ -189,7 +189,7 @@ const CHARACTER_ROSTER = [
   },
   {
     name: 'Shizuru The Summer Chaser',
-    imageKey: 'Shizuru The SummerChaser',
+    imageKey: 'Shizuru The Summer Chaser',
     starterGame: 'B', calculation: 'S', bossMaxxing: 'S',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
