@@ -29,7 +29,7 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Requires specific gear/affixes and resonance level.',
+    investmentCostNote: 'requires specific gear/affixes and resonance level',
     awakenValueNote: "She needs A2 to really become handy, and she isn't a versatile pick outside of Electric DPS.",
     briefReview: 'Her stats are strong and her kit is solid once built, but the sheer cost required to get her there is steep.'
   },
@@ -40,9 +40,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Low', requirement: null },
     awakenValue: 'High',
     overallGrade: 'A',
-    investmentCostNote: 'Pure support role.',
+    investmentCostNote: 'pure support role',
     awakenValueNote: 'Her A1 makes her versatile, can be a great support for many teams.',
-    briefReview: 'Cost Regen support for Electric teams; Strong versatile draw support unit at A1.'
+    briefReview: 'Cost Regen support for Electric teams in any awaken. Strong versatile draw support unit at A1.'
   },
   {
     name: 'Tennie',
@@ -51,9 +51,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Low', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'B',
-    investmentCostNote: 'Pure support role.',
-    awakenValueNote: 'Outside of being a teammate for Connor, she is easily replaceable.',
-    briefReview: "Pretty much a must-have teammate for Connor, a great teammate for Nayuta's Aoba Shuffle; optional in Electric teams, but she barely contributes damage in permafreeze teams. She is a strong freeze-team support, but the cost to build her is high, making her poor value for investment."
+    investmentCostNote: 'pure support role',
+    awakenValueNote: 'outside of being a teammate for Connor, she is easily replaceable.',
+    briefReview: "For Connor, she's practically an indispensable teammate. She's an excellent freezer in the Nayuta-Aoba Shuffle Team. However, under high pressure, the investment in her is very costly. Results her return on investment is low, making it difficult to develop her into a truly outstanding character."
   },
   {
     name: 'Stella',
@@ -62,9 +62,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'High',
     overallGrade: 'S',
-    investmentCostNote: 'Requires investment in survivability.',
-    awakenValueNote: 'It is profitable even if you lose the 50/50 before her A5.',
-    briefReview: 'A versatile deck-cycle unit; performance has softened a bit in the current meta where every support has some unique DMG Boost, but she remains the best pick for easing cycle pressure in early-game and Calculation content.'
+    investmentCostNote: 'Requires investment in survivability',
+    awakenValueNote: 'it is profitable even if you lose the 50/50 before her A5.',
+    briefReview: 'A versatile deck rotation unit. While her performance has declined somewhat in the current meta due to unique damage buffs to each support unit, she remains an excellent choice for relieving early-game pressure and balancing the rotation.'
   },
   {
     name: 'Anfiya',
@@ -73,8 +73,8 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Low', requirement: null },
     awakenValue: 'High',
     overallGrade: 'A',
-    investmentCostNote: 'Pure support role.',
-    awakenValueNote: 'A strong, versatile control unit; worth pulling to A5 for Basic-Attack teams.',
+    investmentCostNote: 'pure support role',
+    awakenValueNote: 'a strong, versatile control unit; worth pulling to A5 for Basic-Attack teams.',
     briefReview: "Very strong CC (Crowd Control) support, can play Perma-Coffin when she's the leader."
   },
   {
@@ -84,8 +84,8 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Used as a sub-carry.',
-    awakenValueNote: "Pure Electric Team Support; if subbed into other teams it's only for fun, A1 provides Final DMG reduction, but not a must-pull.",
+    investmentCostNote: 'used as a sub-carry',
+    awakenValueNote: "pure Electric Team Support; if subbed into other teams it's only for fun, A1 provides Final DMG reduction, but not a must-pull.",
     briefReview: 'Pelota can give Nicola a huge survival advantage, and right now Nicola is pretty much the only one who can proc her kit properly.'
   },
   {
@@ -95,8 +95,8 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'A',
-    investmentCostNote: 'Requires gear affix and more skill level.',
-    awakenValueNote: 'Usable from A2. A4 makes him insanely broken, versatile support.',
+    investmentCostNote: 'requires gear affix and more skill level',
+    awakenValueNote: 'usable from A2. A4 makes him insanely broken, versatile support.',
     briefReview: 'Broken Support at A4 — 40% Final DMG Boost makes him extremely broken for Boss Maxxing. True versatile pick, though he only fully comes handy at A2 and full strength at A4.'
   },
   {
@@ -106,8 +106,8 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Healing is tied to damage dealt.',
-    awakenValueNote: 'Stats are lacking, becomes usable at second awakening, fifth awakening improves versatility.',
+    investmentCostNote: 'healing is tied to damage dealt',
+    awakenValueNote: 'stats are lacking, becomes usable at second awakening, fifth awakening improves versatility.',
     briefReview: 'She was introduced as a support character in the early stages of the game, designed to relieve stress, but has gradually faded from meta — no meta team can effectively utilize her.'
   },
   {
@@ -117,9 +117,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Low awaken is just bad, tied to the Shadowcraft system at A2.',
-    briefReview: "Once had her moment of glory in the Purple Card team; might just pull her SP-version. Unless you really like Margiela, you can utilize her in Stargazer's team."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'low awaken is just bad, tied to the Shadowcraft system at A2.',
+    briefReview: 'She shone brightly in the purple card team, You could just directly get her SP version. Unless you particularly like Margiela, you can add her to the Margiela The Stargazer team.'
   },
   {
     name: 'Wensheng',
@@ -128,8 +128,8 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Not much use.',
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'not much use.',
     briefReview: 'No record found, E Tier guy.'
   },
   {
@@ -139,9 +139,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Requires specific gear affix and skill level.',
-    awakenValueNote: 'A pure Boss Maxxing unit with no versatility. Only recommend A0 or A5.',
-    briefReview: 'If you want -1 fatigue each ram hit, get A0 and stop. If you want a Boss Maxxing Beast, get A5.'
+    investmentCostNote: 'requires specific gear affix and skill level',
+    awakenValueNote: 'a pure Boss Maxxing unit with no versatility. Only recommend A0 or A5.',
+    briefReview: 'If you want to reduce fatigue by 1 per ram hit, then pulling for A0 Ren is enough. If you want a beast that maximizes Boss Maxxing, then pull for A5 Ren. Otherwise, pulling for Ren is not recommended.'
   },
   {
     name: 'Margiela The Stargazer',
@@ -150,31 +150,31 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
     overallGrade: 'S',
-    investmentCostNote: 'Big gap between floor and ceiling.',
-    awakenValueNote: 'Fully functions at A0, extremely versatile, hard to replace as a Black Star damage dealer.',
-    briefReview: "The perfect capstone of the Black Star system — a 'circle within a circle.' Extremely versatile and powerful as a Support/Sub-C, and just as strong running as your Main C. A near all-rounder from tower-climbing to Boss Maxxing."
+    investmentCostNote: 'big gap between floor and ceiling',
+    awakenValueNote: 'fully functions at A0, extremely versatile, hard to replace as a Revenrengy-Nova damage dealer.',
+    briefReview: 'The perfect finale to the Revenrengy-Nova system. As a support or sub-DPS, she is versatile and powerful. As a main DPS, her wave change handling ability is equally impressive. From Calculation to Boss Maxxing, she is virtually omnipotent.'
   },
-  //{
-    //name: 'Masaki',
-    //imageKey: 'Masaki',
-    //starterGame: 'B', calculation: 'A', bossMaxxing: 'S',
-    //investmentCost: { tier: 'High', requirement: null },
-    //awakenValue: 'High',
-    //overallGrade: 'A',
-    //investmentCostNote: 'Needs dedicated DEF-affix farming.',
-    //awakenValueNote: 'Decent versatility, can form a small Familiar sub-team alongside Maid units.',
-    //briefReview: 'A genuinely well-designed kit; his Boss Maxxing ceiling is high but swingy, and he gives a solid boost to any unit that leans on leader-skill or card-face effects.'
-  //},
+  {
+    name: 'Masaki',
+    imageKey: 'Masaki',
+    starterGame: 'B', calculation: 'A', bossMaxxing: 'S',
+    investmentCost: { tier: 'High', requirement: null },
+    awakenValue: 'High',
+    overallGrade: 'A',
+    investmentCostNote: 'needs dedicated DEF-affix boost',
+    awakenValueNote: 'decent versatility, can form a small Familiar team alongside Olivien.',
+    briefReview: 'Masaki has a well-designed skill set. Her Boss Maxxing potential is very high, but also highly variable. In addition, she can provide a solid boost to any unit that relies on leader skills or card effects.'
+  },
   {
     name: 'Dorothy',
     imageKey: 'Dorothy',
     starterGame: 'A', calculation: 'A', bossMaxxing: 'B',
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Medium',
-    overallGrade: 'B',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: "Very flexible teammate choice, F2P have their own way to run her, but she doesn't really pop off until A4, which is expensive to reach.",
-    briefReview: 'A discard-nuke DPS; frequently catches friendly fire from mechanics that target Nayuta.'
+    overallGrade: 'C',
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: "has very flexible teammate choice, F2P have their own way to run her, but one of her teamate Lycagia doesn't really pop off until A4, which is expensive to reach.",
+    briefReview: 'A discard-bomb DPS. Frequently catches friendly fire from mechanics that target Nayuta.'
   },
   {
     name: 'Ilona',
@@ -183,9 +183,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Some versatility, but a kit flaw keeps her from an optimal build, and she needs a high awaken level to shine.',
-    briefReview: "She benefits from a lot of buffs/synergies but has always been underwhelming; if you're not a fan you basically won't play her. VA is Yui Ogura, for what it's worth."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'She has a certain versatility, but her skill set has flaws and cannot be optimally configured. Moreover, she needs a high awakening level to unleash her full potential.',
+    briefReview: "She benefits from a lot of buffs and synergies but has always been underwhelming. If you're not a fan you basically won't play her. VA is Yui Ogura, for what it's worth."
   },
   {
     name: 'Shizuru The Summer Chaser',
@@ -194,9 +194,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
     overallGrade: 'S',
-    investmentCostNote: 'Big gap between floor and ceiling.',
-    awakenValueNote: 'Strong draw support who also deals respectable damage herself; this Summer variant basically needs A2 to work.',
-    briefReview: "Heals, draws cards, builds combo, and brings freeze CC, plus solid personal damage — you won't regret pulling her, but she's limited."
+    investmentCostNote: 'big gap between floor and ceiling',
+    awakenValueNote: 'Shizuru The Summer Chaser possesses powerful card-drawing capabilities and can also deal considerable damage. However, it essentially requires A2 to be effective.',
+    briefReview: "She can heal, draw cards, boost ATK, inflict freeze result control effects, and deal considerable personal damage — you won't regret drawing her, but her abilities are limited."
   },
   //{
     //name: 'Komugi',
@@ -205,9 +205,9 @@ const CHARACTER_ROSTER = [
     //investmentCost: { tier: 'Average', requirement: null },
     //awakenValue: 'Low',
     //overallGrade: 'D',
-    //investmentCostNote: 'Standard gear is sufficient.',
-    //awakenValueNote: "No playstyle found for her yet outside of being Dorothy's dedicated Support.",
-    //briefReview: "A fully-built Komugi can push Dorothy's Boss Maxxing past 200e — but basically nobody runs this. Who's even pulling for the furry unit?"
+    //investmentCostNote: 'standard gear is sufficient',
+    //awakenValueNote: "Currently, aside from serving as Dorothy's exclusive support, no suitable playstyle for her has been found.",
+    //briefReview: "A max-level Wheat can push Dorothy's Boss Maxxing to over 20 billion damage—but basically nobody uses this lineup (it's too expensive (゜皿。))."
   //},
   {
     name: 'Paladi',
@@ -216,9 +216,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'C',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: "At low awaken she's just a DMG-reduction support; discard-nuke synergy only kicks in at A2, and her A5 (Final DMG buff) is pricey.",
-    briefReview: "The 'armored truck driver' for Burn teams, and a refined ATK-down support on top of that. Fairly controversial — 'fine off-rate, fine without her too' — but her utility skill gives Prison content a solid boost."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'At low awakening levels, she is merely a damage reduction support. The discard bomb synergy effect only takes effect at A2, and her A5 (50% Final Damage boost) is expensive.',
+    briefReview: 'Paladi can also provide enhanced attack damage reduction support. Although somewhat controversial—"It’s okay with her or without her."—her support skills do significantly increase the difficulty of the prison level. She can serve as the Leader of all A5 character Wildfire team.'
   },
   {
     name: 'Lycagia',
@@ -227,9 +227,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'C',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Usable from A2, A4 is the key DMG-reduction unlock; poor value for money, but if you play discard-nuke you have to pull her.',
-    briefReview: "This rank assumes A4 by default — at A0 she's worse than an SR."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: "Usable from A2 onwards, and A4 is the key for unlocking damage reduction. It's not very cost-effective, but if you're playing a discard bomb build, you absolutely need to draw it.",
+    briefReview: "This rank assumes A4 by default — at A0 he's worse than an SR."
   },
   {
     name: 'Shire',
@@ -238,9 +238,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'High',
     overallGrade: 'B',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: 'Usable at A0, flexible team comps.',
-    briefReview: 'A very strong unit with a huge range of teammate options, though her numbers are starting to show their age. Basically absent from top Boss Maxxing rankings now — top players run Shizuru The Summer Chaser for damage instead.'
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: 'usable at A0, flexible team comps.',
+    briefReview: "She is a very powerful character with a wide range of teammates, but her stats are starting to look somewhat outdated. Generally, when she teams up with Shizuru The Summer Chaser, Shizuru's damage will be higher than Shire's."
   },
   {
     name: 'Connor',
@@ -249,9 +249,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'C',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Usable at A0, but her stats fall short.',
-    briefReview: 'Almost entirely tied to Tennie; her strength is flexible team-building and cheap DMG reduction, and her blue cards hit high card efficiency — her weakness is that her stats are dated. Bluntly put, her numbers are just too weak now.'
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'usable at A0, but her stats fall short.',
+    briefReview: 'Almost entirely on Tennie. Her strengths lie in her flexible team composition and low-cost damage reduction, and her blue cards are highly efficient—her weakness is that her stats are outdated. Frankly, her current stats are too weak.'
   },
   {
     name: 'Charlotte',
@@ -260,9 +260,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: 'Technically usable from A2, but anything below A5 is rough in the current meta.',
-    briefReview: "Thanks to the Mecha-God armor, her DMG reduction caught up with the meta and she's playable again; at A5 she's roughly on par with Nana at A0. Her buff bumped numbers up a bit, but not much — still not recommended. Mostly just her devoted fans running her, quietly, no complaints."
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: 'technically she can be used at A2 and above, but below A5 are relatively difficult to use in the meta.',
+    briefReview: "Her A5 strength is roughly equivalent to A0 Ushana. Thanks to the powerful Mecha Armor, her damage reduction has slightly caught up with the meta, making her viable to play. But she's still not recommended for use. Currently, only her die-hard fans are quietly using her, and no one is complaining. With future-sight, I say wait for her SP-version."
   },
   {
     name: 'Verlaine',
@@ -271,9 +271,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'No place in the current meta.',
-    briefReview: "A gimmick character with an unclear role and low stats; without a rework she's unlikely to see mainstream play. Right now her only job is as a DMG Boost utility piece for Reeva."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'basically no place in the current meta, can form familiar team with Masaki or Reeva but its not recommended.',
+    briefReview: "This is a character with an unclear role and relatively low stats. Unless she's reworked, she's unlikely to be in any meta teams. Currently, her only role is to provide extra familiar for Reeva."
   },
   {
     name: 'Olivien',
@@ -282,9 +282,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Low', requirement: null },
     awakenValue: 'High',
     overallGrade: 'B',
-    investmentCostNote: 'Pure support role.',
-    awakenValueNote: 'Kit is complete at A0, great card quality on her own, and strong versatility.',
-    briefReview: "Mainly a DMG Boost enabler with an independent multiplier that's hard to dilute; her DMG reduction is more of a bonus. Must-pull if you're prepping a Familiar team."
+    investmentCostNote: 'pure support role',
+    awakenValueNote: 'kit is complete at A0, great card quality on her own, and strong versatility.',
+    briefReview: "Mainly a Final DMG Boost support with an independent multiplier that's hard to dilute. Her DMG reduction is more of a bonus. Must-pull if you're prepping a Familiar team."
   },
   //{
     //name: 'Reeva',
@@ -293,20 +293,20 @@ const CHARACTER_ROSTER = [
     //investmentCost: { tier: 'Average', requirement: null },
     //awakenValue: 'Low',
     //overallGrade: 'D',
-    //investmentCostNote: 'Standard gear is sufficient.',
-    //awakenValueNote: "A Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
+    //investmentCostNote: 'standard gear is sufficient',
+    //awakenValueNote: "a Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
     //briefReview: "Leans on kit synergy over raw numbers; skip her unless you're a big fan (not worth pulling for waifu points). Her discard-deck mechanic looks promising though — worth watching for future support."
   //},
   //{
     //name: 'Ikara',
     //imageKey: 'Ikara',
-    //starterGame: 'A', calculation: 'B', bossMaxxing: 'A',
+    //starterGame: 'A', calculation: 'A', bossMaxxing: 'A',
     //investmentCost: { tier: 'High', requirement: null },
     //awakenValue: 'Medium',
-    //overallGrade: 'B',
-    //investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    //awakenValueNote: "Several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now; her utility skill is excellent though.",
-    //briefReview: 'The first Dragonkin-system character, with some genuinely fresh design ideas — the Empire update will likely build new units around this system, but for now her stats are just middling. Her story art is gorgeous though.'
+    //overallGrade: 'A',
+    //investmentCostNote: 'requires specific gear/affixes and resonance',
+    //awakenValueNote: "several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now. Her Life Skill is excellent though.",
+    //briefReview: 'The first Dragon-system character, with some genuinely fresh design ideas — the Mundus Empire update will likely build new units around this system, but for now her stats are just middling. Her art is gorgeous though.'
   //},
   {
     name: 'Katas',
@@ -315,9 +315,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'D',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Usable as a disposable filler unit at A0.',
-    briefReview: "A skill-battery for Pursuit teams; compared to Paladi her edge is better low-awaken performance, but as a Main C she's fallen behind the times — she also had her glory days once. Waiting on an SP."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'usable as a Energy Bubblegum cost support unit at A0.',
+    briefReview: 'Can be Follow-Up ATK Team Leader. Compared to Paladi, her advantage lies in her better performance in low-awakening state, but as a main DPS character, she is outdated. Looking forward to the SP character.'
   },
   {
     name: 'Joshua',
@@ -326,9 +326,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'High',
     overallGrade: 'C',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: 'Usable right from A0.',
-    briefReview: "After a redesign-style buff on his original concept, he's now a viable Cost Regen pick for a secondary Black Card team, though he can't compete with Chloe for Black Card priority. Both his Shadowcraft and Demon-God builds have been phased out."
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: 'usable right from A0.',
+    briefReview: "Joshua is a viable Cost Regen pick for a secondary Revenrengy Card team, though Joshua's kit does not have high priority with Chloe nor Gears for Reverengy. Both his Shadowcraft and Demon-God builds have been phased out."
   },
   {
     name: 'Dustin',
@@ -336,10 +336,10 @@ const CHARACTER_ROSTER = [
     starterGame: 'B', calculation: 'B', bossMaxxing: 'C',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Medium',
-    overallGrade: 'C',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Part of his kit is locked behind awaken levels.',
-    briefReview: "Used to be a very strong red-card discard Sub-C thanks to the 'shrink bomb' mechanic; now his stats fall short, and his lack of draw support is an increasingly glaring weakness. His buff didn't fix that."
+    overallGrade: 'B',
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'part of his kit is locked behind awakens.',
+    briefReview: "A very strong red-card discard Sub-Carry thanks to the 'Retraction Bomb MK 3' mechanic. Now his stats fall short, and his lack of draw support is an increasingly glaring weakness."
   },
   {
     name: 'Nayuta',
@@ -348,9 +348,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
     overallGrade: 'S',
-    investmentCostNote: 'Big gap between floor and ceiling.',
-    awakenValueNote: 'Kit is complete at A0.',
-    briefReview: 'Is Nayuta a design failure?'
+    investmentCostNote: 'big gap between floor and ceiling',
+    awakenValueNote: 'kit is complete at A0.',
+    briefReview: 'Is Nayuta a design failure? The Standard God!?'
   },
   {
     name: 'Sommer',
@@ -358,10 +358,10 @@ const CHARACTER_ROSTER = [
     starterGame: 'A', calculation: 'A', bossMaxxing: 'C',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'High',
-    overallGrade: 'C',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Kit is complete at A0, performs great in the early game, flexible team-building, but easily replaceable.',
-    briefReview: 'Once a Stat Monster; now her only real strength is being comfortable for the early game.'
+    overallGrade: 'B',
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'kit is complete at A0, performs great in the early game, flexible team-building, but easily replaceable.',
+    briefReview: 'Stat Monster. Her only real advantage right now is her strong early-game adaptability.'
   },
   {
     name: 'Lissandra',
@@ -370,9 +370,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'High',
     overallGrade: 'C',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Kit is complete at A0, an excellent Shadowcraft generator, and her yellow-card experience is solid too.',
-    briefReview: 'An early-game powerhouse whose ult is easy to charge and comes with self-heal and party-wide stun; her cards are refined and efficient — one card can clear Purple Card objectives 5 times over. Quite versatile.'
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'kit is complete at A0, an excellent Shadowcraft generator, and her yellow-card experience is solid too.',
+    briefReview: 'An early-game powerhouse whose ult is easy to charge and comes with self-heal and crowd control stun. Her cards are refined and efficient — one card can clear Purple Card objectives 5 times over. Quite versatile.'
   },
   {
     name: 'Suen',
@@ -381,9 +381,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Low',
     overallGrade: 'D',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: 'A DMG-reduction piece usable from A2, only fully online at A5, but her real performance has fallen behind the current meta.',
-    briefReview: "At A5 she used to be a piece of the 'Infinite Demon God' combo; now, falling behind across the board on kit and numbers, she has no place in the meta and only shows up in gimmick teams."
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: 'A high-pressure survival character that can be used from A2 onwards, but only becomes fully effective in A5, and her actual performance is already behind the current Meta.',
+    briefReview: "At A5 she used to be a piece of the 'Infinite Demon God' combo. Now, falling behind across the board on kit and numbers, she has no place in the meta and only shows up in gimmick teams."
   },
   {
     name: 'Jalhay',
@@ -392,9 +392,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'High',
     overallGrade: 'A',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Although she only becomes a viable Main C at A2, her kit is already quite strong at A0.',
-    briefReview: "An ATK-down unit for the Purple Card system; the legendary 'full hand at 3-cost' card — her own three cards are basically god-tier hand-compression, and her shuffle refunds cost too. Very high-quality, versatile unit. Her weakness is relatively weak DMG Boost utility."
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'Although she can only become a qualified main DPS at A2, she is already very strong at A0.',
+    briefReview: "An ATK-down unit for the Purple Card system. The legendary 'Perception' allow you draw a full hand with 3 cost, and her own three cards are basically god-tier hand-compression, and her shuffle refunds cost too. Very high-quality, versatile unit. Her weakness is relatively weak DMG Boost utility. After the change, her kits stays the same until we gets more Psychic Characters."
   },
   {
     name: 'Ithos',
@@ -403,9 +403,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Low', requirement: null },
     awakenValue: 'High',
     overallGrade: 'A',
-    investmentCostNote: 'Pure support role.',
-    awakenValueNote: 'Kit is complete at A0, extremely strong versatility.',
-    briefReview: 'A dedicated top-tier healer; like Anfiya, she monopolizes her lane — an F2P-friendly, DMG-reduction powerhouse. Her weakness is that she offers almost no offensive-side buffs, so her play rate may keep declining going forward.'
+    investmentCostNote: 'pure support role',
+    awakenValueNote: 'kit is complete at A0, extremely strong versatility.',
+    briefReview: 'Ithos is a top-tier healer, he dominates the healing meta—friendly to F2P players and DMG-reduction powerhouse. His weakness lies in providing almost no offensive buffs, therefore his pick rate is expected to continue declining in the future.'
   },
   {
     name: 'Raziel The Reminisce',
@@ -414,9 +414,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
     overallGrade: 'S',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'Kit is complete at A0, ideally aim for 1 copy; A2 is a strong DMG Boost enabler, and she can be passed to Shizuru The Summer Chaser/Connor to cover stat gaps.',
-    briefReview: 'One of the root causes of the 1st-anniversary power creep, and a core piece of the Black Star system; her downside is needing a lot of extra draw support, and her DMG Boost utility is relatively weak.'
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'Her kit at A0 is already quite complete. Ideally, you should only get A0. But her A2 is a powerful damage booster (Waves deals 50% more DMG), supports lots new character and incoming character and also that can be passed to help Connor / Charlotte to make up for the gap between other characters.',
+    briefReview: 'Totally the reason of power creep, and a core piece of the Reverengy-Nova system. Her downside is needing a lot of extra draw support, and her other DMG Boost utility is relatively weak.'
   },
   {
     name: 'Raziel',
@@ -425,9 +425,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'A',
-    investmentCostNote: 'Standard gear is sufficient.',
-    awakenValueNote: 'A Stat Monster.',
-    briefReview: 'Similar role to Ushana; her edge is less pressure on draw support and more flexible team-building — can run as Main C or Sub C. In Margiela The Stargazer/Sommer-type teams she can slot in as a Pursuit unit, and is more stable than Masaki.'
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: 'a Stat Monster.',
+    briefReview: 'Similar role to Ushana. Her edge is less pressure on draw support and more flexible team-building — can run as Main Carry or Sub Carry. In Margiela The Stargazer or Sommer-type teams she can slot in as a Follow-Up ATK unit, and is more stable than Masaki.'
   },
   {
     name: 'Ushana',
@@ -436,9 +436,9 @@ const CHARACTER_ROSTER = [
     investmentCost: { tier: 'High', requirement: null },
     awakenValue: 'Medium',
     overallGrade: 'A',
-    investmentCostNote: 'Requires specific gear/affixes and resonance.',
-    awakenValueNote: 'Usable at A0, no current tower-climbing replacement for the Margiela The Stargazer/Sommer-type lineup.',
-    briefReview: "A Stat Monster who can tank Deep Crimson-tier pressure; her Boss Maxxing performance is starting to show its age but she's still good to run."
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: 'usable at A0, no current Calculation replacement for the Margiela The Stargazer/Sommer-type lineup.',
+    briefReview: "A Stat Monster who can easily survive high pressure with Crimson Prophecy. Her Boss Maxxing performance is starting to show its age but she's still good to run."
   },
   //{
     //name: 'Chloe',
@@ -447,8 +447,8 @@ const CHARACTER_ROSTER = [
     //investmentCost: { tier: 'Average', requirement: null },
     //awakenValue: 'Very High',
     //overallGrade: 'S',
-    //investmentCostNote: 'Big gap between floor and ceiling.',
-    //awakenValueNote: 'Usable from A2, but already extremely versatile.',
-    //briefReview: 'The new Electric God — a character gorgeous in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric. Reeva, take notes.'
+    //investmentCostNote: 'big gap between floor and ceiling',
+    //awakenValueNote: 'usable from A2, but she is already extremely versatile at A1.',
+    //briefReview: 'The new Electric God — a character broken in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric.'
   //}
 ];

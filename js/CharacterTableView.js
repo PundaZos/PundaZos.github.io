@@ -1,7 +1,7 @@
 // ============================================================
 // CharacterTableView — renders the searchable Characters table.
 // Clicking a row expands it to show Investment Cost / Awaken Value
-// reasoning and a Brief Review.
+// reasoning and a Brief Review. Clicking a column header sorts by it.
 // ============================================================
 class CharacterTableView {
   constructor(tableBodyElement, searchInputElement, characterRepository, imageResolver){
@@ -10,9 +10,65 @@ class CharacterTableView {
     this.characterRepository = characterRepository;
     this.imageResolver = imageResolver;
     this.expandedCharacterNames = new Set();
+    this.sortState = { key: 'name', direction: 'asc' };
+
+    this.tableHeadElement = tableBodyElement.closest('table').querySelector('thead');
+    this.tableHeadElement.addEventListener('click', event => this.handleHeaderClick(event));
 
     this.tableBodyElement.addEventListener('click', event => this.handleRowClick(event));
     this.tableBodyElement.addEventListener('keydown', event => this.handleRowKeydown(event));
+  }
+
+  handleHeaderClick(event){
+    const headerElement = event.target.closest('th.sortable');
+    if (!headerElement) return;
+    const key = headerElement.dataset.sortKey;
+    if (this.sortState.key === key){
+      this.sortState.direction = this.sortState.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+      this.sortState.key = key;
+      this.sortState.direction = 'asc';
+    }
+    this.render();
+  }
+
+  updateSortIndicators(){
+    this.tableHeadElement.querySelectorAll('th.sortable').forEach(headerElement => {
+      const isActive = headerElement.dataset.sortKey === this.sortState.key;
+      headerElement.classList.toggle('sort-active', isActive);
+      const caret = headerElement.querySelector('.sort-caret');
+      if (!isActive){
+        caret.textContent = '';
+      } else {
+        caret.textContent = this.sortState.direction === 'asc' ? '▲' : '▼';
+      }
+    });
+  }
+
+  getSortValue(character, key){
+    if (key === 'name') return character.name.toLowerCase();
+    if (key === 'starterGame' || key === 'calculation' || key === 'bossMaxxing'){
+      return GRADE_SORT_RANK[character[key]] ?? 99;
+    }
+    if (key === 'investmentCost') return INVESTMENT_COST_SORT_RANK[character.investmentCost.tier] ?? 99;
+    if (key === 'awakenValue') return AWAKEN_VALUE_SORT_RANK[character.awakenValue] ?? 99;
+    return 0;
+  }
+
+  sortCharacters(characters){
+    const { key, direction } = this.sortState;
+    const sorted = [...characters].sort((a, b) => {
+      const valueA = this.getSortValue(a, key);
+      const valueB = this.getSortValue(b, key);
+      let comparison = typeof valueA === 'string'
+        ? valueA.localeCompare(valueB)
+        : valueA - valueB;
+      if (comparison === 0 && key !== 'name'){
+        comparison = a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+      }
+      return direction === 'asc' ? comparison : -comparison;
+    });
+    return sorted;
   }
 
   toggleCharacter(characterName){
@@ -126,17 +182,20 @@ class CharacterTableView {
     const allCharacters = this.characterRepository.getAll();
     if (allCharacters.length === 0){
       this.renderEmptyState('No characters yet.');
+      this.updateSortIndicators();
       return;
     }
 
     const query = this.searchInputElement.value || '';
-    const visibleCharacters = this.characterRepository.searchByName(query);
+    const visibleCharacters = this.sortCharacters(this.characterRepository.searchByName(query));
     if (visibleCharacters.length === 0){
       this.renderEmptyState(`No characters match "${escapeHtml(query.trim())}".`);
+      this.updateSortIndicators();
       return;
     }
 
     this.tableBodyElement.innerHTML = visibleCharacters.map(character => this.renderRow(character)).join('');
     this.attachAvatarFallbacks();
+    this.updateSortIndicators();
   }
 }

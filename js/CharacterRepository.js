@@ -4,7 +4,7 @@
 // ============================================================
 class CharacterRepository {
   constructor(characters){
-    this.characters = characters;
+    this.characters = [...characters].sort((a, b) => a.name.localeCompare(b.name));
   }
 
   getAll(){

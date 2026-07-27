@@ -20,6 +20,13 @@ const GRADE_MEANING = {
   D: 'Not Recommended'
 };
 
+// Used only to put a sensible best-to-worst order on the Characters
+// table when the person clicks a column header to sort by it. These
+// don't affect scoring or badge colors — purely a sort order.
+const GRADE_SORT_RANK = { S: 0, A: 1, B: 2, C: 3, D: 4 };
+const INVESTMENT_COST_SORT_RANK = { Low: 0, Medium: 1, Average: 1, High: 2 };
+const AWAKEN_VALUE_SORT_RANK = { 'Very High': 0, Must: 0, High: 1, Medium: 2, Average: 2, Low: 3, 'Very Low': 4 };
+
 // The four factors that describe a character. `key` matches a property
 // on each character object in CHARACTER_ROSTER. `type` selects which
 // scale (and which renderer) applies:
