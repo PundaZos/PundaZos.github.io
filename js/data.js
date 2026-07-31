@@ -10,7 +10,8 @@ const CHARACTER_IMAGE_CONFIG = {
 // ============================================================
 // ROSTER DATA — this is the "backend". Add, edit, or remove
 // characters here directly.
-//   imageKey        : filename (no extension) shared by both art folders
+//   imageKey        : filename (no extension) shared by both art folders —
+//                     matches `name` exactly, spaces included
 //   starterGame / calculation / bossMaxxing : 'S' | 'A' | 'B' | 'C' | 'D'
 //   investmentCost : { tier: 'Low' | 'Medium' | 'High', requirement: string | null }
 //   awakenValue     : 'Must' | 'High' | 'Average' | 'Low' | 'Very Low'
@@ -198,17 +199,19 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'Shizuru The Summer Chaser possesses powerful card-drawing capabilities and can also deal considerable damage. However, it essentially requires A2 to be effective.',
     briefReview: "She can heal, draw cards, boost ATK, inflict freeze result control effects, and deal considerable personal damage — you won't regret drawing her, but her abilities are limited."
   },
-  //{
-    //name: 'Komugi',
-    //imageKey: 'Komugi',
-    //starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
-    //investmentCost: { tier: 'Average', requirement: null },
-    //awakenValue: 'Low',
-    //overallGrade: 'D',
-    //investmentCostNote: 'standard gear is sufficient',
-    //awakenValueNote: "Currently, aside from serving as Dorothy's exclusive support, no suitable playstyle for her has been found.",
-    //briefReview: "A max-level Wheat can push Dorothy's Boss Maxxing to over 20 billion damage—but basically nobody uses this lineup (it's too expensive (゜皿。))."
-  //},
+  /* HIDDEN (uncomment this block to bring Komugi back)
+  {
+    name: 'Komugi',
+    imageKey: 'Komugi',
+    starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
+    investmentCost: { tier: 'Average', requirement: null },
+    awakenValue: 'Low',
+    overallGrade: 'D',
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: "Currently, aside from serving as Dorothy's exclusive support, no suitable playstyle for her has been found.",
+    briefReview: "A max-level Wheat can push Dorothy's Boss Maxxing to over 20 billion damage—but basically nobody uses this lineup (it's too expensive (゜皿。))."
+  },
+  */
   {
     name: 'Paladi',
     imageKey: 'Paladi',
@@ -286,28 +289,32 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'kit is complete at A0, great card quality on her own, and strong versatility.',
     briefReview: "Mainly a Final DMG Boost support with an independent multiplier that's hard to dilute. Her DMG reduction is more of a bonus. Must-pull if you're prepping a Familiar team."
   },
-  //{
-    //name: 'Reeva',
-    //imageKey: 'Reeva',
-    //starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
-    //investmentCost: { tier: 'Average', requirement: null },
-    //awakenValue: 'Low',
-    //overallGrade: 'D',
-    //investmentCostNote: 'standard gear is sufficient',
-    //awakenValueNote: "a Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
-    //briefReview: "Leans on kit synergy over raw numbers; skip her unless you're a big fan (not worth pulling for waifu points). Her discard-deck mechanic looks promising though — worth watching for future support."
-  //},
-  //{
-    //name: 'Ikara',
-    //imageKey: 'Ikara',
-    //starterGame: 'A', calculation: 'A', bossMaxxing: 'A',
-    //investmentCost: { tier: 'High', requirement: null },
-    //awakenValue: 'Medium',
-    //overallGrade: 'A',
-    //investmentCostNote: 'requires specific gear/affixes and resonance',
-    //awakenValueNote: "several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now. Her Life Skill is excellent though.",
-    //briefReview: 'The first Dragon-system character, with some genuinely fresh design ideas — the Mundus Empire update will likely build new units around this system, but for now her stats are just middling. Her art is gorgeous though.'
-  //},
+  /* HIDDEN (uncomment this block to bring Reeva back)
+  {
+    name: 'Reeva',
+    imageKey: 'Reeva',
+    starterGame: 'C', calculation: 'C', bossMaxxing: 'A',
+    investmentCost: { tier: 'Average', requirement: null },
+    awakenValue: 'Low',
+    overallGrade: 'D',
+    investmentCostNote: 'standard gear is sufficient',
+    awakenValueNote: "a Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
+    briefReview: "Leans on kit synergy over raw numbers; skip her unless you're a big fan (not worth pulling for waifu points). Her discard-deck mechanic looks promising though — worth watching for future support."
+  },
+  */
+  /* HIDDEN (uncomment this block to bring Ikara back)
+  {
+    name: 'Ikara',
+    imageKey: 'Ikara',
+    starterGame: 'A', calculation: 'A', bossMaxxing: 'A',
+    investmentCost: { tier: 'High', requirement: null },
+    awakenValue: 'Medium',
+    overallGrade: 'A',
+    investmentCostNote: 'requires specific gear/affixes and resonance',
+    awakenValueNote: "several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now. Her Life Skill is excellent though.",
+    briefReview: 'The first Dragon-system character, with some genuinely fresh design ideas — the Mundus Empire update will likely build new units around this system, but for now her stats are just middling. Her art is gorgeous though.'
+  },
+  */
   {
     name: 'Katas',
     imageKey: 'Katas',
@@ -408,8 +415,8 @@ const CHARACTER_ROSTER = [
     briefReview: 'Ithos is a top-tier healer, he dominates the healing meta—friendly to F2P players and DMG-reduction powerhouse. His weakness lies in providing almost no offensive buffs, therefore his pick rate is expected to continue declining in the future.'
   },
   {
-    name: 'Raziel The Reminisce',
-    imageKey: 'Raziel The Reminisce',
+    name: 'Raziel The Reminisc',
+    imageKey: 'Raziel The Reminisc',
     starterGame: 'A', calculation: 'S', bossMaxxing: 'B',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
@@ -440,15 +447,17 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'usable at A0, no current Calculation replacement for the Margiela The Stargazer/Sommer-type lineup.',
     briefReview: "A Stat Monster who can easily survive high pressure with Crimson Prophecy. Her Boss Maxxing performance is starting to show its age but she's still good to run."
   },
-  //{
-    //name: 'Chloe',
-    //imageKey: 'Chloe',
-    //starterGame: 'A', calculation: 'S', bossMaxxing: 'S',
-    //investmentCost: { tier: 'Average', requirement: null },
-    //awakenValue: 'Very High',
-    //overallGrade: 'S',
-    //investmentCostNote: 'big gap between floor and ceiling',
-    //awakenValueNote: 'usable from A2, but she is already extremely versatile at A1.',
-    //briefReview: 'The new Electric God — a character broken in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric.'
-  //}
+  /* HIDDEN (uncomment this block to bring Chloe back)
+  {
+    name: 'Chloe',
+    imageKey: 'Chloe',
+    starterGame: 'A', calculation: 'S', bossMaxxing: 'S',
+    investmentCost: { tier: 'Average', requirement: null },
+    awakenValue: 'Very High',
+    overallGrade: 'S',
+    investmentCostNote: 'big gap between floor and ceiling',
+    awakenValueNote: 'usable from A2, but she is already extremely versatile at A1.',
+    briefReview: 'The new Electric God — a character broken in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric.'
+  }
+  */
 ];

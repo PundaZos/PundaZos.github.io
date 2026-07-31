@@ -11,11 +11,11 @@ class CharacterImageResolver {
   }
 
   getHalfBodyArtSrc(character){
-    return `${this.halfBodyArtDir}${character.imageKey}${this.extension}`;
+    return `${this.halfBodyArtDir}${encodeURIComponent(character.imageKey)}${this.extension}`;
   }
 
   getClosedUpIconSrc(character){
-    return `${this.closedUpIconDir}${character.imageKey}${this.extension}`;
+    return `${this.closedUpIconDir}${encodeURIComponent(character.imageKey)}${this.extension}`;
   }
 
   getInitial(character){

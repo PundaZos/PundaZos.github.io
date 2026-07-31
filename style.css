@@ -84,7 +84,7 @@ body::before{
   z-index: -1;
   background: radial-gradient(ellipse at 20% -10%, var(--bg-glow) 0%, var(--bg) 55%);
 }
-.app{max-width: 1180px; margin: 0 auto; padding-top: 28px;}
+.app{max-width: 1300px; margin: 0 auto; padding-top: 28px;}
 
 .topbar{
   position: sticky; top: 0; z-index: 50;
@@ -498,15 +498,17 @@ tbody tr:last-child td{ border-bottom:none; }
 .tier-row[data-tier="D"] .tier-plaque{ background: var(--d-vivid); }
 
 .tier-chips{
-  flex:1; display:flex; flex-wrap:wrap; align-content:flex-start; gap: 12px;
+  flex:1; display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  align-content: flex-start; gap: 14px;
   padding: 14px; min-height: 58px;
 }
 .tier-card{
   position: relative;
-  width: 120px; height: 158px;
+  width: 100%; aspect-ratio: 120 / 158;
   border-radius: 12px; overflow: hidden;
   background: var(--panel-2); border: 1px solid var(--line);
-  cursor: default; flex-shrink: 0;
+  cursor: default;
   transition: border-color .15s ease, transform .15s ease;
 }
 .tier-card:hover, .tier-card:focus-visible{
@@ -518,7 +520,7 @@ tbody tr:last-child td{ border-bottom:none; }
 }
 .tier-card-fallback{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-family:'Cinzel', serif; font-weight:700; font-size: 44px;
+  font-family:'Cinzel', serif; font-weight:700; font-size: 48px;
   color: var(--ink-faint); background: var(--bg);
 }
 .tier-card-scrim{
@@ -542,8 +544,11 @@ tbody tr:last-child td{ border-bottom:none; }
   .panel{ padding: 16px 14px 20px; }
   .tier-plaque{ flex-basis: 50px; font-size: 21px; }
   .tier-plaque small{ font-size: 8.5px; }
-  .tier-chips{ padding: 10px; gap: 8px; }
-  .tier-card{ width: 90px; height: 119px; border-radius: 10px; }
+  .tier-chips{
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    padding: 10px; gap: 8px;
+  }
+  .tier-card{ border-radius: 10px; }
   .tier-card-name{ font-size: 12px; left: 5px; right: 5px; bottom: 6px; }
 }
 
