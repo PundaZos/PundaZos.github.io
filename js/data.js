@@ -415,8 +415,8 @@ const CHARACTER_ROSTER = [
     briefReview: 'Ithos is a top-tier healer, he dominates the healing meta—friendly to F2P players and DMG-reduction powerhouse. His weakness lies in providing almost no offensive buffs, therefore his pick rate is expected to continue declining in the future.'
   },
   {
-    name: 'Raziel The Reminisc',
-    imageKey: 'Raziel The Reminisc',
+    name: 'Raziel The Reminisce',
+    imageKey: 'Raziel The Reminisce',
     starterGame: 'A', calculation: 'S', bossMaxxing: 'B',
     investmentCost: { tier: 'Average', requirement: null },
     awakenValue: 'Very High',
