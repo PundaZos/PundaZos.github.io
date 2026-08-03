@@ -353,7 +353,7 @@ const CHARACTER_ROSTER = [
     imageKey: 'Nayuta',
     starterGame: 'A', calculation: 'S', bossMaxxing: 'S',
     investmentCost: { tier: 'Average', requirement: null },
-    awakenValue: 'Very High',
+    awakenValue: 'Low',
     overallGrade: 'S',
     investmentCostNote: 'big gap between floor and ceiling',
     awakenValueNote: 'kit is complete at A0.',
