@@ -289,7 +289,6 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'kit is complete at A0, great card quality on her own, and strong versatility.',
     briefReview: "Mainly a Final DMG Boost support with an independent multiplier that's hard to dilute. Her DMG reduction is more of a bonus. Must-pull if you're prepping a Familiar team."
   },
-  /* HIDDEN (uncomment this block to bring Reeva back)
   {
     name: 'Reeva',
     imageKey: 'Reeva',
@@ -298,10 +297,9 @@ const CHARACTER_ROSTER = [
     awakenValue: 'Low',
     overallGrade: 'D',
     investmentCostNote: 'standard gear is sufficient',
-    awakenValueNote: "a Boss Maxxing-focused unit for cycle-heavy content, and her stats still aren't strong enough.",
-    briefReview: "Leans on kit synergy over raw numbers; skip her unless you're a big fan (not worth pulling for waifu points). Her discard-deck mechanic looks promising though — worth watching for future support."
+    awakenValueNote: "a Boss Maxxing-focused unit that need to have a good cycle, and her stats aren't strong enough.",
+    briefReview: "This character isn't very strong; you can skip her unless you really like her. Her skill (R1) is unique: when her cards are discarded, they don't go to the discard pile but are returned to your hand. This mechanic is fun to play, but other than that, she's not particularly special."
   },
-  */
   /* HIDDEN (uncomment this block to bring Ikara back)
   {
     name: 'Ikara',
