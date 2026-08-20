@@ -445,7 +445,6 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'usable at A0, no current Calculation replacement for the Margiela The Stargazer/Sommer-type lineup.',
     briefReview: "A Stat Monster who can easily survive high pressure with Crimson Prophecy. Her Boss Maxxing performance is starting to show its age but she's still good to run."
   },
-  /* HIDDEN (uncomment this block to bring Chloe back)
   {
     name: 'Chloe',
     imageKey: 'Chloe',
@@ -457,5 +456,4 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'usable from A2, but she is already extremely versatile at A1.',
     briefReview: 'The new Electric God — a character broken in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric.'
   }
-  */
 ];
