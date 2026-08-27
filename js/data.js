@@ -199,7 +199,6 @@ const CHARACTER_ROSTER = [
     awakenValueNote: 'Shizuru The Summer Chaser possesses powerful card-drawing capabilities and can also deal considerable damage. However, it essentially requires A2 to be effective.',
     briefReview: "She can heal, draw cards, boost ATK, inflict freeze result control effects, and deal considerable personal damage — you won't regret drawing her, but her abilities are limited."
   },
-  /* HIDDEN (uncomment this block to bring Komugi back)
   {
     name: 'Komugi',
     imageKey: 'Komugi',
@@ -211,7 +210,6 @@ const CHARACTER_ROSTER = [
     awakenValueNote: "Currently, aside from serving as Dorothy's exclusive support, no suitable playstyle for her has been found.",
     briefReview: "A max-level Wheat can push Dorothy's Boss Maxxing to over 20 billion damage—but basically nobody uses this lineup (it's too expensive (゜皿。))."
   },
-  */
   {
     name: 'Paladi',
     imageKey: 'Paladi',
