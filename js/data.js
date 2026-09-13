@@ -298,7 +298,6 @@ const CHARACTER_ROSTER = [
     awakenValueNote: "a Boss Maxxing-focused unit that need to have a good cycle, and her stats aren't strong enough.",
     briefReview: "This character isn't very strong; you can skip her unless you really like her. Her skill (R1) is unique: when her cards are discarded, they don't go to the discard pile but are returned to your hand. This mechanic is fun to play, but other than that, she's not particularly special."
   },
-  /* HIDDEN (uncomment this block to bring Ikara back)
   {
     name: 'Ikara',
     imageKey: 'Ikara',
@@ -310,7 +309,6 @@ const CHARACTER_ROSTER = [
     awakenValueNote: "several important awaken breakpoints, but since her real value is 'future potential' (current strength is lacking), value for money isn't great right now. Her Life Skill is excellent though.",
     briefReview: 'The first Dragon-system character, with some genuinely fresh design ideas — the Mundus Empire update will likely build new units around this system, but for now her stats are just middling. Her art is gorgeous though.'
   },
-  */
   {
     name: 'Katas',
     imageKey: 'Katas',
