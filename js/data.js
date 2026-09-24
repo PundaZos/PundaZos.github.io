@@ -451,5 +451,16 @@ const CHARACTER_ROSTER = [
     investmentCostNote: 'big gap between floor and ceiling',
     awakenValueNote: 'usable from A2, but she is already extremely versatile at A1.',
     briefReview: 'The new Electric God — a character broken in both stats and mechanics. She can go all-in for massive Electric-stacked damage, or pivot to Cost Regen and draw support for resource management — the queen of discard-Electric.'
+  },
+  {
+    name: 'Eliade',
+    imageKey: 'Eliade',
+    starterGame: 'S', calculation: 'S', bossMaxxing: 'S',
+    investmentCost: { tier: 'Average', requirement: null },
+    awakenValue: 'Low',
+    overallGrade: 'S',
+    investmentCostNote: 'ok ish invest for him, no specific gear needed but 5 crimson will be nice for sustainability',
+    awakenValueNote: 'Just Stop at A0, high awaken Eliade is not worth the  pulls',
+    briefReview: 'He basically the F2P player god just like Nayuta, can easy perma CC the enemy, just need to check if the enemy is immue to frostbite or not.'
   }
 ];
