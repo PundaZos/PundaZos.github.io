@@ -1,13 +1,14 @@
 // ============================================================
 // CardTooltipController — floating tooltip that follows the
-// cursor (or keyboard focus) over a tier-board chip and shows
-// that character's five stats.
+// cursor (or keyboard focus) over a tier-board chip. Content is
+// mode-aware: shows the active system's tier and rating breakdown.
 // ============================================================
 class CardTooltipController {
   constructor(tooltipElement, boardElement, characterRepository){
     this.tooltipElement = tooltipElement;
     this.boardElement = boardElement;
     this.characterRepository = characterRepository;
+    this.mode = 'a0';
     this.edgePadding = 16;
 
     boardElement.addEventListener('mouseover', event => this.handlePointerEnter(event));
@@ -17,49 +18,44 @@ class CardTooltipController {
     boardElement.addEventListener('focusout', event => this.handleFocusLeave(event));
   }
 
-  findCard(eventTarget){
-    return eventTarget.closest ? eventTarget.closest('.tier-card') : null;
+  setMode(mode){
+    this.mode = mode;
   }
 
-  renderStatRow(character, factor){
-    if (factor.type === 'grade'){
-      const grade = character[factor.key];
-      return `
-        <div class="tt-row">
-          <span>${factor.label}</span>
-          <span class="tt-badge" data-grade="${grade}">${grade}</span>
-        </div>`;
-    }
-
-    if (factor.type === 'cost'){
-      const costInfo = character[factor.key];
-      const labelSuffix = costInfo.requirement ? ` (${escapeHtml(costInfo.requirement)})` : '';
-      return `
-        <div class="tt-row">
-          <span>${factor.label}${labelSuffix}</span>
-          <span class="tt-badge tt-badge-level">${escapeHtml(costInfo.tier)}</span>
-        </div>`;
-    }
-
-    // type === 'value'
-    const value = character[factor.key];
-    return `
-      <div class="tt-row">
-        <span>${factor.label}</span>
-        <span class="tt-badge tt-badge-level">${escapeHtml(value)}</span>
-      </div>`;
+  findCard(eventTarget){
+    return eventTarget.closest ? eventTarget.closest('.tier-card') : null;
   }
 
   buildContent(cardElement){
     const character = this.characterRepository.findByName(cardElement.dataset.character);
     if (!character) return;
-    const statRows = FACTOR_DEFINITIONS.map(factor => this.renderStatRow(character, factor)).join('');
-    const gachaValueRow = `
+    const data = character[this.mode];
+    const config = MODE_CONFIG[this.mode];
+
+    const displayedTier = this.mode === 'a0' ? getA0Tier(character) : data.tier;
+    const provisionalSuffix = (this.mode === 'a0' && isA0TierProvisional(character)) ? t('shared.provisionalSuffix') : '';
+
+    const tierLabel = this.mode === 'highAwaken'
+      ? `${t(config.tierLabelKey)} (A${escapeHtml(String(data.awakenLevel))})`
+      : `${t(config.tierLabelKey)}${provisionalSuffix}`;
+
+    const headlineRow = `
       <div class="tt-row tt-row-overall">
-        <span>Gacha Value</span>
-        <span class="tt-badge" data-grade="${character.overallGrade}">${character.overallGrade}</span>
+        <span>${escapeHtml(tierLabel)}</span>
+        <span class="tt-badge" data-grade="${displayedTier}">${displayedTier}</span>
       </div>`;
-    this.tooltipElement.innerHTML = `<div class="tt-name">${escapeHtml(character.name)}</div>${gachaValueRow}${statRows}`;
+    const roleRow = `
+      <div class="tt-row">
+        <span>${escapeHtml(t('col.role'))}</span>
+        <span class="tt-badge tt-badge-level">${escapeHtml(getLocalizedField(data, 'role'))}</span>
+      </div>`;
+    const statRows = config.fields.map(field => `
+      <div class="tt-row">
+        <span>${escapeHtml(t(field.labelKey))}</span>
+        <span class="tt-badge" data-grade="${data[field.key]}">${data[field.key]}</span>
+      </div>`).join('');
+
+    this.tooltipElement.innerHTML = `<div class="tt-name">${escapeHtml(getDisplayName(character))}</div>${headlineRow}${roleRow}${statRows}`;
   }
 
   show(cardElement){

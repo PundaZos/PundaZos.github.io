@@ -8,58 +8,93 @@
 <body>
 <nav class="topbar">
   <div class="topbar-inner">
-    <span class="topbar-brand">Gacha Tier List</span>
+    <span class="topbar-brand" data-i18n="nav.brand">Gacha Tier List</span>
     <div class="topbar-tabs" id="topbarTabs">
-      <button type="button" class="topbar-tab" data-target="home-section">Home</button>
-      <button type="button" class="topbar-tab" data-target="tier-list-section">Tier List</button>
-      <button type="button" class="topbar-tab" data-target="characters-section">Characters</button>
+      <button type="button" class="topbar-tab" data-target="home-section" data-i18n="nav.home">Home</button>
+      <button type="button" class="topbar-tab" data-target="tier-list-section" data-i18n="nav.tierList">Tier List</button>
+      <button type="button" class="topbar-tab" data-target="characters-section" data-i18n="nav.characters">Characters</button>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle day and night mode" type="button">
-      <span id="themeLabel">Night</span>
-      <span class="track"><span class="thumb"></span></span>
-    </button>
+    <div class="topbar-controls">
+      <label class="mini-toggle" id="collabToggleWrap" data-i18n-title="shared.collabTitle" title="Show collaboration characters.">
+        <input type="checkbox" id="collabToggle">
+        <span data-i18n="shared.collab">Collab</span>
+        <span class="track"><span class="thumb"></span></span>
+      </label>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle day and night mode" type="button">
+        <span id="themeLabel">Night</span>
+        <span class="track"><span class="thumb"></span></span>
+      </button>
+      <select class="lang-select" id="langSelect" aria-label="Choose language">
+        <option value="en">EN</option>
+        <option value="zh">简体中文</option>
+      </select>
+    </div>
   </div>
 </nav>
 <div class="app">
 
   <section class="panel tab-panel home-panel" id="home-section">
-    <h2>Welcome</h2>
-    <p class="home-copy">In <strong>Resonance Solstice</strong>, the interactions between characters are highly significant, making it difficult to fully understand their strength by evaluating any single character in isolation — a character's strength largely depends on their teammates. Therefore, it's challenging to provide an objective ranking of individual character strength.</p>
-    <p class="home-copy">This list analyzes each character from five aspects: three performance categories — <strong>Starter Game</strong>, <strong>Calculation</strong>, and <strong>Boss Maxxing</strong> — as well as <strong>Investment Cost</strong> and <strong>Awaken Value</strong>. These analyses ultimately lead to a conclusion directly applicable to each character, rather than calculations: <strong>Gacha Value</strong>, as shown in the <strong>Gacha Tier List</strong> here.</p>
+    <h2 data-i18n="home.welcome">Welcome</h2>
+    <p class="home-copy" data-i18n="home.intro1"></p>
+    <p class="home-copy" data-i18n="home.intro2"></p>
+    <p class="home-copy" data-i18n="home.intro3"></p>
+    <p class="home-copy" data-i18n="home.intro4"></p>
 
-    <h3 class="home-subheading">Recommended Rules</h3>
+    <div class="home-lists">
+      <div class="home-list-card">
+        <h3 data-i18n="shared.modeA0Full">A0 Tier List</h3>
+        <p data-i18n="home.a0Desc"></p>
+      </div>
+      <div class="home-list-card">
+        <h3 data-i18n="shared.modeHighAwakenFull">High Awaken Tier List</h3>
+        <p data-i18n="home.highAwakenDesc"></p>
+      </div>
+    </div>
+
+    <h3 class="home-subheading" data-i18n="home.rulesTitle"></h3>
     <ol class="home-rules">
-      <li>Prioritize new characters over rerun characters.</li>
-      <li>Prioritize support characters over DPS carries.</li>
-      <li>If a character looks like it will get stronger later on, it's fine to wait and pull them then.</li>
-      <li>These are guidelines, not requirements — pull a character you genuinely like regardless.</li>
+      <li data-i18n-html="home.rule1"></li>
+      <li data-i18n-html="home.rule2"></li>
+      <li data-i18n-html="home.rule3"></li>
+      <li data-i18n-html="home.rule4"></li>
     </ol>
 
-    <p class="home-copy">If you're F2P or a light spender, weigh <strong>Gacha Value</strong> more heavily. If you spend more and can afford to invest deeper, weigh <strong>Awaken Value</strong> more heavily instead.</p>
-
-    <p class="home-copy">To be honest, this is still a fairly subjective list. I consulted other top players for input, but there are bound to be gaps — please bear with me, and feel free to point out corrections. That said, since this is meant as a <strong>Gacha Value</strong> tier list rather than a pure strength tier list, it should be more broadly useful in practice.</p>
-    <p class="home-copy">Collab characters are not included in this tier list.</p>
+    <h3 class="home-subheading" data-i18n="home.lastWordsTitle"></h3>
+    <p class="home-copy" data-i18n="home.lastWords"></p>
   </section>
 
   <section class="panel tab-panel" id="tier-list-section">
     <div class="tier-intro">
-      <h1>Gacha Recommendation Tier List</h1>
-      <p class="lede">Not a "who's strongest" ranking — a "who's worth the gacha" one. Each character is broken down across four factors: how they carry you through Starter Game, Calculation, and Boss Maxxing, plus how much they cost to build (Investment Cost) and how they hold up at low Awakens (Awaken Value). The final Gacha Value verdict below is set directly for each character, informed by that breakdown rather than auto-calculated from it.</p>
+      <h1 data-i18n="tierList.title">Gacha Recommendation Tier List</h1>
+      <div class="mode-switch" data-scope="tier-list" id="tierListModeSwitch">
+        <button type="button" class="mode-switch-btn" data-mode="a0" data-i18n="shared.modeA0Full">A0 Tier List</button>
+        <button type="button" class="mode-switch-btn" data-mode="highAwaken" data-i18n="shared.modeHighAwakenFull">High Awaken Tier List</button>
+      </div>
+      <p class="lede mode-explainer" id="tierListModeExplainer"></p>
+      <div class="legend" id="tierListLegend"></div>
       <details class="factor-definitions-toggle">
-        <summary>What do these mean?</summary>
+        <summary data-i18n="shared.whatDoTheseMean">What do these ratings mean?</summary>
         <dl class="factor-definitions" id="tierFactorDefinitions"></dl>
       </details>
     </div>
     <div id="tierBoard"></div>
+    <div class="upcoming-content" data-upcoming hidden>
+      <span class="upcoming-badge" data-i18n="shared.upcomingContent">Upcoming Content</span>
+      <p data-i18n="shared.upcomingNote">This list is still being prepared. Check back soon.</p>
+    </div>
   </section>
 
   <section class="panel tab-panel" id="characters-section">
-    <h2>Characters</h2>
-    <p class="panel-sub">Starter Game, Calculation, and Boss Maxxing use the S–D scale. Investment Cost uses its own Low/Medium/High scale, and Awaken Value uses a five-step scale from Must to Very Low. The final Gacha Value grade is set directly, not calculated from the others. Click any character to see the reasoning behind their ratings.</p>
+    <h2 data-i18n="characters.title">Characters</h2>
+    <div class="mode-switch" data-scope="characters" id="charactersModeSwitch">
+      <button type="button" class="mode-switch-btn" data-mode="a0" data-i18n="shared.modeA0Short">A0</button>
+      <button type="button" class="mode-switch-btn" data-mode="highAwaken" data-i18n="shared.modeHighAwakenShort">High Awaken</button>
+    </div>
+    <p class="panel-sub mode-explainer" id="charactersModeExplainer"></p>
     <div class="legend" id="charactersLegend"></div>
 
     <button type="button" class="def-toggle" id="charactersDefToggle">
-      <span class="def-toggle-arrow"></span>What do these mean?
+      <span class="def-toggle-arrow"></span><span data-i18n="shared.whatDoTheseMean">What do these mean?</span>
     </button>
     <dl class="factor-definitions factor-definitions-compact" id="charactersFactorDefinitions" hidden></dl>
 
@@ -68,25 +103,19 @@
         <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6"/>
         <line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
       </svg>
-      <input type="text" id="searchInput" placeholder="Search characters&hellip;" aria-label="Search characters">
+      <input type="text" id="searchInput" data-i18n-placeholder="characters.searchPlaceholder" placeholder="Search characters&hellip;" aria-label="Search characters">
     </div>
 
-    <p class="table-scroll-hint">Swipe sideways to see all columns &rarr;</p>
+    <p class="table-scroll-hint" data-i18n="characters.scrollHint">Swipe sideways to see all columns &rarr;</p>
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr>
-            <th class="sortable" data-sort-key="name">Character<span class="sort-caret"></span></th>
-            <th class="grp-perf sortable" data-sort-key="starterGame">Starter Game<span class="sort-caret"></span></th>
-            <th class="grp-perf sortable" data-sort-key="calculation">Calculation<span class="sort-caret"></span></th>
-            <th class="grp-perf sortable" data-sort-key="bossMaxxing">Boss Maxxing<span class="sort-caret"></span></th>
-            <th class="grp-val sortable" data-sort-key="investmentCost">Investment Cost<span class="sort-caret"></span></th>
-            <th class="grp-val sortable" data-sort-key="awakenValue">Awaken Value<span class="sort-caret"></span></th>
-            <th>Gacha Value</th>
-          </tr>
-        </thead>
+        <thead id="charactersTableHead"></thead>
         <tbody id="rosterBody"></tbody>
       </table>
+    </div>
+    <div class="upcoming-content" data-upcoming hidden>
+      <span class="upcoming-badge" data-i18n="shared.upcomingContent">Upcoming Content</span>
+      <p data-i18n="shared.upcomingNote">This list is still being prepared. Check back soon.</p>
     </div>
   </section>
 
@@ -94,24 +123,31 @@
 
 <div class="chip-tooltip" id="chipTooltip" role="tooltip"></div>
 
-<!-- Config & data first (no dependencies) -->
+<!-- i18n, config & data first (no dependencies) -->
+<script src="js/i18n.js"></script>
 <script src="js/config.js"></script>
 <script src="js/data.js"></script>
 <script src="js/utils.js"></script>
 
-<!-- Core engine / model classes -->
+<!-- Core model classes -->
 <script src="js/CharacterRepository.js"></script>
 <script src="js/CharacterImageResolver.js"></script>
 
-<!-- View / controller classes (each depends on the above) -->
+<!-- View classes -->
 <script src="js/LegendView.js"></script>
-<script src="js/FactorDefinitionsView.js"></script>
+<script src="js/ModeDefinitionsView.js"></script>
 <script src="js/CharacterTableView.js"></script>
 <script src="js/TierBoardView.js"></script>
 <script src="js/CardTooltipController.js"></script>
+
+<!-- Controller classes -->
 <script src="js/CollapsibleSectionController.js"></script>
 <script src="js/ThemeController.js"></script>
 <script src="js/TabController.js"></script>
+<script src="js/ModeSwitchController.js"></script>
+
+<!-- URL <-> app-state helpers -->
+<script src="js/urlState.js"></script>
 
 <!-- App entry point: wires everything together -->
 <script src="js/app.js"></script>

@@ -1,6 +1,5 @@
 // ============================================================
-// ThemeController — day/night mode toggle. Defaults to the
-// visitor's system preference, then can be flipped manually.
+// ThemeController — day/night mode toggle.
 // ============================================================
 class ThemeController {
   constructor(toggleButtonElement, labelElement){
@@ -18,10 +17,10 @@ class ThemeController {
   apply(){
     if (this.currentTheme === 'light'){
       this.htmlElement.setAttribute('data-theme', 'light');
-      this.labelElement.textContent = 'Day';
+      this.labelElement.textContent = t('shared.day');
     } else {
       this.htmlElement.removeAttribute('data-theme');
-      this.labelElement.textContent = 'Night';
+      this.labelElement.textContent = t('shared.night');
     }
   }
 

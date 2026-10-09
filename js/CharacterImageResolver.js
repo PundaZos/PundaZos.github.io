@@ -1,7 +1,6 @@
 // ============================================================
-// CharacterImageResolver — computes where a character's art lives
-// in each of the two art folders, plus a fallback initial letter
-// for when an image file isn't available yet.
+// CharacterImageResolver — computes where a character's art lives,
+// plus a fallback initial letter for when an image isn't available.
 // ============================================================
 class CharacterImageResolver {
   constructor({ halfBodyArtDir, closedUpIconDir, extension }){
