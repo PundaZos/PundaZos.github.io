@@ -398,6 +398,47 @@ const CHARACTER_ROSTER = [
     }
   },
   {
+    name: 'Helena',
+    nameZh: '海伦娜',
+    imageKey: 'Helena',
+    a0: {
+      visible: true,
+      tier: 'A',
+      tierIsManual: true,
+      role: 'Support',
+      roleZh: '辅助',
+      content: 'B',
+      versatility: 'A',
+      longevity: 'B',
+      priority: 'A',
+      contentNote: 'A0 Helena is mainly used for healing and deck cycling, and she performs both roles fairly well. One important thing to do after getting Helena is to max out her [Gem Box] skill node, as it provides much-needed Cost Regen to compensate for her relatively expensive kit, even with her Resonance nodes upgraded. Overall, she\'s a decent and reliable support who offers both card shuffling and team sustain, making her a solid option for teams that need a bit of both.',
+      contentNoteZh: '0觉主要用来奶和过牌，需要点小共振回费才算完整',
+      versatilityNote: 'A0 Helena is mainly used for healing and deck cycling, and she performs both roles fairly well. One important thing to do after getting Helena is to max out her [Gem Box] skill node, as it provides much-needed Cost Regen to compensate for her relatively expensive kit, even with her Resonance nodes upgraded. Overall, she\'s a decent and reliable support who offers both card shuffling and team sustain, making her a solid option for teams that need a bit of both.',
+      versatilityNoteZh: '0觉主要用来奶和过牌，需要点小共振回费才算完整',
+      longevityNote: 'A0 Helena is mainly used for healing and deck cycling, and she performs both roles fairly well. One important thing to do after getting Helena is to max out her [Gem Box] skill node, as it provides much-needed Cost Regen to compensate for her relatively expensive kit, even with her Resonance nodes upgraded. Overall, she\'s a decent and reliable support who offers both card shuffling and team sustain, making her a solid option for teams that need a bit of both.',
+      longevityNoteZh: '0觉主要用来奶和过牌，需要点小共振回费才算完整',
+      review: 'A0 Helena is mainly used for healing and deck cycling, and she performs both roles fairly well. One important thing to do after getting Helena is to max out her [Gem Box] skill node, as it provides much-needed Cost Regen to compensate for her relatively expensive kit, even with her Resonance nodes upgraded. Overall, she\'s a decent and reliable support who offers both card shuffling and team sustain, making her a solid option for teams that need a bit of both.',
+      reviewZh: '0觉主要用来奶和过牌，需要点小共振回费才算完整'
+    },
+    highAwaken: {
+      visible: true,
+      tier: 'C',
+      awakenLevel: 4,
+      role: 'TBD',
+      damage: 'C',
+      highDifficulty: 'C',
+      costRecovery: 'C',
+      cardCycling: 'C',
+      costEffectiveness: 'C',
+      damageNote: 'Placeholder — High Awaken rating not yet written.',
+      highDifficultyNote: 'Placeholder — High Awaken rating not yet written.',
+      costRecoveryNote: 'Placeholder — High Awaken rating not yet written.',
+      cardCyclingNote: 'Placeholder — High Awaken rating not yet written.',
+      costEffectivenessNote: 'Placeholder — High Awaken rating not yet written.',
+      review: 'Placeholder — High Awaken review not yet written.'
+    }
+  },
+  {
     name: 'Wensheng',
     nameZh: '闻笙',
     imageKey: 'Wensheng',
